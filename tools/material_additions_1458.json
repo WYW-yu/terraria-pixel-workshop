@@ -1,0 +1,710 @@
+{
+  "game_version": "1.4.5.8",
+  "map_source": "Terraria.Map.MapHelper.Initialize colorLookup / tileLookup / wallLookup; option 0",
+  "materials": [
+    {
+      "kind": "tile",
+      "id": 708,
+      "name_zh": "微光瀑布块",
+      "name": "Shimmerfall",
+      "map_rgb": [
+        237,
+        218,
+        244
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 717,
+      "name_zh": "熔岩云",
+      "name": "LavaCloud",
+      "map_rgb": [
+        126,
+        102,
+        118
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 718,
+      "name_zh": "星云",
+      "name": "StarCloud",
+      "map_rgb": [
+        245,
+        215,
+        196
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 719,
+      "name_zh": "彩虹云",
+      "name": "RainbowCloud",
+      "map_rgb": [
+        223,
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 722,
+      "name_zh": "坠落之星块",
+      "name": "FallenStarBlock",
+      "map_rgb": [
+        185,
+        190,
+        20
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 727,
+      "name_zh": "暗淡红队块",
+      "name": "TeamBlockRedVariant",
+      "map_rgb": [
+        119,
+        22,
+        52
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 728,
+      "name_zh": "暗淡绿队块",
+      "name": "TeamBlockGreenVariant",
+      "map_rgb": [
+        23,
+        119,
+        79
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 729,
+      "name_zh": "暗淡蓝队块",
+      "name": "TeamBlockBlueVariant",
+      "map_rgb": [
+        23,
+        54,
+        119
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 730,
+      "name_zh": "暗淡黄队块",
+      "name": "TeamBlockYellowVariant",
+      "map_rgb": [
+        119,
+        68,
+        23
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 731,
+      "name_zh": "暗淡粉队块",
+      "name": "TeamBlockPinkVariant",
+      "map_rgb": [
+        74,
+        23,
+        119
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 732,
+      "name_zh": "暗淡白队块",
+      "name": "TeamBlockWhiteVariant",
+      "map_rgb": [
+        78,
+        82,
+        109
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 734,
+      "name_zh": "仙林",
+      "name": "Feywood",
+      "map_rgb": [
+        160,
+        115,
+        80
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 735,
+      "name_zh": "神圣砖",
+      "name": "HallowedBrick",
+      "map_rgb": [
+        235,
+        200,
+        20
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 736,
+      "name_zh": "复活节物块",
+      "name": "EasterBlock",
+      "map_rgb": [
+        240,
+        130,
+        160
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 737,
+      "name_zh": "哥特砖",
+      "name": "GothicBrick",
+      "map_rgb": [
+        65,
+        75,
+        65
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 738,
+      "name_zh": "小雪怪皮物块",
+      "name": "FlinxFurBlock",
+      "map_rgb": [
+        210,
+        170,
+        215
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 739,
+      "name_zh": "水母物块",
+      "name": "JellyfishBlock",
+      "map_rgb": [
+        90,
+        125,
+        235
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 740,
+      "name_zh": "玩具毁灭者砖",
+      "name": "ToyBreakerBlock",
+      "map_rgb": [
+        211,
+        211,
+        211
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 741,
+      "name_zh": "松木",
+      "name": "PineWoodBlock",
+      "map_rgb": [
+        160,
+        90,
+        50
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 742,
+      "name_zh": "鹰身女妖块",
+      "name": "HarpyBlock",
+      "map_rgb": [
+        26,
+        141,
+        204
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 743,
+      "name_zh": "月盘块",
+      "name": "MoonplateBlock",
+      "map_rgb": [
+        227,
+        227,
+        227
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 744,
+      "name_zh": "图书管理员块",
+      "name": "LibrarianBlock",
+      "map_rgb": [
+        106,
+        103,
+        96
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 745,
+      "name_zh": "尖刺块",
+      "name": "SpikeBlock",
+      "map_rgb": [
+        120,
+        114,
+        108
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 746,
+      "name_zh": "办公块",
+      "name": "OfficeBlock",
+      "map_rgb": [
+        122,
+        78,
+        21
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 747,
+      "name_zh": "禁戒块",
+      "name": "ForbiddenBlock",
+      "map_rgb": [
+        231,
+        178,
+        28
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 748,
+      "name_zh": "水族块",
+      "name": "WaterBlock",
+      "map_rgb": [
+        2,
+        114,
+        206
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 749,
+      "name_zh": "巨石块",
+      "name": "BoulderBlock",
+      "map_rgb": [
+        121,
+        121,
+        121
+      ]
+    },
+    {
+      "kind": "tile",
+      "id": 750,
+      "name_zh": "锋利尖刺块",
+      "name": "DamagingSpikeBlock",
+      "map_rgb": [
+        121,
+        121,
+        121
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 21,
+      "name_zh": "玻璃墙",
+      "name": "Glass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 27,
+      "name_zh": "板条墙",
+      "name": "Planked",
+      "map_rgb": [
+        88,
+        61,
+        46
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 88,
+      "name_zh": "紫花窗玻璃",
+      "name": "PurpleStainedGlass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 89,
+      "name_zh": "黄花窗玻璃",
+      "name": "YellowStainedGlass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 90,
+      "name_zh": "蓝花窗玻璃",
+      "name": "BlueStainedGlass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 91,
+      "name_zh": "绿花窗玻璃",
+      "name": "GreenStainedGlass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 92,
+      "name_zh": "红花窗玻璃",
+      "name": "RedStainedGlass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 93,
+      "name_zh": "五彩花窗玻璃",
+      "name": "RainbowStainedGlass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 106,
+      "name_zh": "木栅栏",
+      "name": "WoodenFence",
+      "map_rgb": [
+        148,
+        116,
+        74
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 107,
+      "name_zh": "铅栅栏",
+      "name": "MetalFence",
+      "map_rgb": [
+        60,
+        60,
+        60
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 145,
+      "name_zh": "铁栅栏",
+      "name": "IronFence",
+      "map_rgb": [
+        144,
+        144,
+        144
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 150,
+      "name_zh": "针叶木栅栏",
+      "name": "BorealWoodFence",
+      "map_rgb": [
+        73,
+        59,
+        50
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 152,
+      "name_zh": "棕榈木栅栏",
+      "name": "PalmWoodFence",
+      "map_rgb": [
+        102,
+        75,
+        34
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 168,
+      "name_zh": "彩纸墙",
+      "name": "Confetti",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 241,
+      "name_zh": "橙花窗玻璃",
+      "name": "OrangeStainedGlass",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 318,
+      "name_zh": "回声墙",
+      "name": "EchoWall",
+      "map_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 347,
+      "name_zh": "微光瀑布墙",
+      "name": "Shimmerfall",
+      "map_rgb": [
+        100,
+        65,
+        130
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 348,
+      "name_zh": "坠落之星墙",
+      "name": "FallenStarWall",
+      "map_rgb": [
+        120,
+        75,
+        75
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 349,
+      "name_zh": "石墙（非住房用）",
+      "name": "StoneUnsafe",
+      "map_rgb": [
+        52,
+        52,
+        52
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 350,
+      "name_zh": "不可破坏墙",
+      "name": "UnbreakableBlockWall",
+      "map_rgb": [
+        0,
+        255,
+        0
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 351,
+      "name_zh": "仙林墙",
+      "name": "FeywoodWall",
+      "map_rgb": [
+        80,
+        57,
+        40
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 352,
+      "name_zh": "神圣砖墙",
+      "name": "HallowedBrickWall",
+      "map_rgb": [
+        117,
+        100,
+        10
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 353,
+      "name_zh": "松树墙",
+      "name": "PineTreeBlockWall",
+      "map_rgb": [
+        13,
+        54,
+        34
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 354,
+      "name_zh": "复活节墙",
+      "name": "EasterBlockWall",
+      "map_rgb": [
+        120,
+        65,
+        80
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 355,
+      "name_zh": "哥特砖墙",
+      "name": "GothicBrickWall",
+      "map_rgb": [
+        32,
+        37,
+        32
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 356,
+      "name_zh": "小雪怪皮墙",
+      "name": "FlinxFurBlockWall",
+      "map_rgb": [
+        105,
+        85,
+        107
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 357,
+      "name_zh": "水母墙",
+      "name": "JellyfishBlockWall",
+      "map_rgb": [
+        45,
+        62,
+        117
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 358,
+      "name_zh": "松木墙",
+      "name": "PineWoodBlockWall",
+      "map_rgb": [
+        80,
+        45,
+        25
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 359,
+      "name_zh": "鹰身女妖墙",
+      "name": "HarpyBlockWall",
+      "map_rgb": [
+        13,
+        70,
+        102
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 360,
+      "name_zh": "新月墙",
+      "name": "MoonplateBlockWall",
+      "map_rgb": [
+        73,
+        93,
+        116
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 361,
+      "name_zh": "图书管理员墙",
+      "name": "LibrarianBlockWall",
+      "map_rgb": [
+        53,
+        51,
+        48
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 362,
+      "name_zh": "尖刺墙",
+      "name": "SpikeBlockWall",
+      "map_rgb": [
+        60,
+        57,
+        54
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 363,
+      "name_zh": "办公墙",
+      "name": "OfficeBlockWall",
+      "map_rgb": [
+        61,
+        39,
+        10
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 364,
+      "name_zh": "禁戒墙",
+      "name": "ForbiddenBlockWall",
+      "map_rgb": [
+        115,
+        89,
+        14
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 365,
+      "name_zh": "水族墙",
+      "name": "WaterBlockWall",
+      "map_rgb": [
+        1,
+        57,
+        103
+      ]
+    },
+    {
+      "kind": "wall",
+      "id": 366,
+      "name_zh": "巨石墙",
+      "name": "BoulderBlockWall",
+      "map_rgb": [
+        60,
+        60,
+        60
+      ]
+    }
+  ]
+}

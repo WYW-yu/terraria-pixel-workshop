@@ -1,0 +1,20 @@
+{
+  "all": {
+    "original_bytes": 33639421,
+    "stored_bytes": 1470005,
+    "original_sha256": "1295a399bfb8bce80b472c07f36b666b605488b00a1e9e17e1590a0464f5e0ec",
+    "lookup_sha256": "8759d9a480229fe4f43acddf03293a4eff0b49d3ea4e4d06152f70ee080c3e43"
+  },
+  "tile": {
+    "original_bytes": 33595531,
+    "stored_bytes": 1280289,
+    "original_sha256": "979841d3d749e47f56d00fcedb2c5525470fe947d9d87ee282effcbce7eaea50",
+    "lookup_sha256": "038a4659468f3ce53912236ad8e0473f6ba16536b9f786403d141b7fd6b50263"
+  },
+  "wall": {
+    "original_bytes": 33598324,
+    "stored_bytes": 1029297,
+    "original_sha256": "d7a6e62dff6d8ff9e8513b8e42612fe2294b6e32ce66f645dddc22f93b5b2d7f",
+    "lookup_sha256": "dea20f1be5e19fc1750aced10e2585b0fd373374de7b48d5609193e450df0d36"
+  }
+}

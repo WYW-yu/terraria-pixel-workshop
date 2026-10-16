@@ -1,0 +1,42 @@
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build outputs and downloadable packages
+build*/
+dist*/
+*.egg-info/
+*.zip
+*.exe
+*.msi
+
+# Personal projects, worlds, drafts and local application state
+输出/
+像素画草稿/
+历史记录.json
+最近草稿.json
+*.tpdraft
+*.wld
+*.bak
+*.TEditSch
+作品记录.json
+作品数据.npz
+.tmp/
+*.log
+
+# Local secrets and editor settings
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+**/.DS_Store

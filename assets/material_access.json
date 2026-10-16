@@ -1,0 +1,4863 @@
+{
+  "game_version": "1.4.5.8",
+  "source": "Item.SetDefaults1–5: createTile/createWall and DefaultToPlaceableTile/Wall",
+  "input_sha256": "d8245228fbe41d97819bdcf0f879292a28ab62f4b7c96fbb77d6ad409f5738c2",
+  "wall_aliases": {
+    "3": 246,
+    "13": 177,
+    "14": 20,
+    "15": 247,
+    "28": 248,
+    "40": 249,
+    "48": 250,
+    "49": 251,
+    "50": 252,
+    "51": 253,
+    "52": 254,
+    "53": 255,
+    "54": 256,
+    "55": 257,
+    "56": 258,
+    "57": 259,
+    "58": 260,
+    "59": 261,
+    "61": 262,
+    "63": 66,
+    "64": 67,
+    "65": 68,
+    "69": 264,
+    "70": 265,
+    "71": 266,
+    "79": 267,
+    "80": 74,
+    "81": 268,
+    "83": 269,
+    "86": 108,
+    "170": 270,
+    "171": 271,
+    "178": 183,
+    "180": 184,
+    "185": 274,
+    "188": 276,
+    "189": 277,
+    "190": 278,
+    "191": 279,
+    "192": 280,
+    "193": 281,
+    "194": 282,
+    "195": 283,
+    "196": 284,
+    "197": 285,
+    "198": 286,
+    "199": 287,
+    "200": 288,
+    "201": 289,
+    "202": 290,
+    "203": 291,
+    "204": 292,
+    "205": 293,
+    "206": 294,
+    "207": 295,
+    "208": 296,
+    "209": 297,
+    "210": 298,
+    "211": 299,
+    "212": 300,
+    "213": 301,
+    "214": 302,
+    "215": 303,
+    "217": 305,
+    "218": 306,
+    "219": 307,
+    "220": 308,
+    "221": 309,
+    "222": 310,
+    "223": 311,
+    "349": 1
+  },
+  "unavailable_walls": [
+    272,
+    273,
+    350
+  ],
+  "unavailable_tiles": [
+    668
+  ],
+  "tool_materials": {
+    "194": {
+      "item_id": 154,
+      "item_name": "Bone",
+      "item_name_zh": "骨头",
+      "tool_item_id": 932,
+      "tool_name_zh": "白骨魔棒"
+    }
+  },
+  "placements": {
+    "tile": {
+      "0": [
+        {
+          "item_id": 2,
+          "item_name": "DirtBlock",
+          "item_name_zh": "土块",
+          "place_style": 0
+        }
+      ],
+      "1": [
+        {
+          "item_id": 3,
+          "item_name": "StoneBlock",
+          "item_name_zh": "石块",
+          "place_style": 0
+        }
+      ],
+      "30": [
+        {
+          "item_id": 9,
+          "item_name": "Wood",
+          "item_name_zh": "木材",
+          "place_style": 0
+        }
+      ],
+      "6": [
+        {
+          "item_id": 11,
+          "item_name": "IronOre",
+          "item_name_zh": "铁矿",
+          "place_style": 0
+        }
+      ],
+      "7": [
+        {
+          "item_id": 12,
+          "item_name": "CopperOre",
+          "item_name_zh": "铜矿",
+          "place_style": 0
+        }
+      ],
+      "8": [
+        {
+          "item_id": 13,
+          "item_name": "GoldOre",
+          "item_name_zh": "金矿",
+          "place_style": 0
+        }
+      ],
+      "9": [
+        {
+          "item_id": 14,
+          "item_name": "SilverOre",
+          "item_name_zh": "银矿",
+          "place_style": 0
+        }
+      ],
+      "22": [
+        {
+          "item_id": 56,
+          "item_name": "DemoniteOre",
+          "item_name_zh": "魔矿",
+          "place_style": 0
+        }
+      ],
+      "23": [
+        {
+          "item_id": 59,
+          "item_name": "CorruptSeeds",
+          "item_name_zh": "腐化种子",
+          "place_style": 0
+        }
+      ],
+      "25": [
+        {
+          "item_id": 61,
+          "item_name": "EbonstoneBlock",
+          "item_name_zh": "黑檀石块",
+          "place_style": 0
+        }
+      ],
+      "2": [
+        {
+          "item_id": 62,
+          "item_name": "GrassSeeds",
+          "item_name_zh": "草种子",
+          "place_style": 0
+        },
+        {
+          "item_id": 213,
+          "item_name": "StaffofRegrowth",
+          "item_name_zh": "再生法杖",
+          "place_style": 0
+        },
+        {
+          "item_id": 5295,
+          "item_name": "AcornAxe",
+          "item_name_zh": "再生之斧",
+          "place_style": 0
+        }
+      ],
+      "330": [
+        {
+          "item_id": 71,
+          "item_name": "CopperCoin",
+          "item_name_zh": "铜币",
+          "place_style": 0
+        }
+      ],
+      "331": [
+        {
+          "item_id": 72,
+          "item_name": "SilverCoin",
+          "item_name_zh": "银币",
+          "place_style": 0
+        }
+      ],
+      "332": [
+        {
+          "item_id": 73,
+          "item_name": "GoldCoin",
+          "item_name_zh": "金币",
+          "place_style": 0
+        }
+      ],
+      "333": [
+        {
+          "item_id": 74,
+          "item_name": "PlatinumCoin",
+          "item_name_zh": "铂金币",
+          "place_style": 0
+        }
+      ],
+      "214": [
+        {
+          "item_id": 85,
+          "item_name": "Chain",
+          "item_name_zh": "链条",
+          "place_style": 0
+        }
+      ],
+      "37": [
+        {
+          "item_id": 116,
+          "item_name": "Meteorite",
+          "item_name_zh": "陨石",
+          "place_style": 0
+        }
+      ],
+      "38": [
+        {
+          "item_id": 129,
+          "item_name": "GrayBrick",
+          "item_name_zh": "灰砖",
+          "place_style": 0
+        }
+      ],
+      "39": [
+        {
+          "item_id": 131,
+          "item_name": "RedBrick",
+          "item_name_zh": "红砖",
+          "place_style": 0
+        }
+      ],
+      "40": [
+        {
+          "item_id": 133,
+          "item_name": "ClayBlock",
+          "item_name_zh": "粘土块",
+          "place_style": 0
+        }
+      ],
+      "41": [
+        {
+          "item_id": 134,
+          "item_name": "BlueBrick",
+          "item_name_zh": "蓝砖",
+          "place_style": 0
+        }
+      ],
+      "43": [
+        {
+          "item_id": 137,
+          "item_name": "GreenBrick",
+          "item_name_zh": "绿砖",
+          "place_style": 0
+        }
+      ],
+      "44": [
+        {
+          "item_id": 139,
+          "item_name": "PinkBrick",
+          "item_name_zh": "粉砖",
+          "place_style": 0
+        }
+      ],
+      "45": [
+        {
+          "item_id": 141,
+          "item_name": "GoldBrick",
+          "item_name_zh": "金砖",
+          "place_style": 0
+        }
+      ],
+      "46": [
+        {
+          "item_id": 143,
+          "item_name": "SilverBrick",
+          "item_name_zh": "银砖",
+          "place_style": 0
+        }
+      ],
+      "47": [
+        {
+          "item_id": 145,
+          "item_name": "CopperBrick",
+          "item_name_zh": "铜砖",
+          "place_style": 0
+        }
+      ],
+      "48": [
+        {
+          "item_id": 147,
+          "item_name": "Spike",
+          "item_name_zh": "尖刺",
+          "place_style": 0
+        }
+      ],
+      "53": [
+        {
+          "item_id": 169,
+          "item_name": "SandBlock",
+          "item_name_zh": "沙块",
+          "place_style": 0
+        }
+      ],
+      "54": [
+        {
+          "item_id": 170,
+          "item_name": "Glass",
+          "item_name_zh": "玻璃",
+          "place_style": 0
+        }
+      ],
+      "57": [
+        {
+          "item_id": 172,
+          "item_name": "AshBlock",
+          "item_name_zh": "灰烬块",
+          "place_style": 0
+        }
+      ],
+      "56": [
+        {
+          "item_id": 173,
+          "item_name": "Obsidian",
+          "item_name_zh": "黑曜石",
+          "place_style": 0
+        }
+      ],
+      "58": [
+        {
+          "item_id": 174,
+          "item_name": "Hellstone",
+          "item_name_zh": "狱石",
+          "place_style": 0
+        }
+      ],
+      "59": [
+        {
+          "item_id": 176,
+          "item_name": "MudBlock",
+          "item_name_zh": "泥块",
+          "place_style": 0
+        }
+      ],
+      "190": [
+        {
+          "item_id": 183,
+          "item_name": "GlowingMushroom",
+          "item_name_zh": "发光蘑菇",
+          "place_style": 0
+        }
+      ],
+      "75": [
+        {
+          "item_id": 192,
+          "item_name": "ObsidianBrick",
+          "item_name_zh": "黑曜石砖",
+          "place_style": 0
+        }
+      ],
+      "70": [
+        {
+          "item_id": 194,
+          "item_name": "MushroomGrassSeeds",
+          "item_name_zh": "蘑菇草种子",
+          "place_style": 0
+        }
+      ],
+      "60": [
+        {
+          "item_id": 195,
+          "item_name": "JungleGrassSeeds",
+          "item_name_zh": "丛林草种子",
+          "place_style": 0
+        }
+      ],
+      "76": [
+        {
+          "item_id": 214,
+          "item_name": "HellstoneBrick",
+          "item_name_zh": "狱石砖",
+          "place_style": 0
+        }
+      ],
+      "188": [
+        {
+          "item_id": 276,
+          "item_name": "Cactus",
+          "item_name_zh": "仙人掌",
+          "place_style": 0
+        }
+      ],
+      "107": [
+        {
+          "item_id": 364,
+          "item_name": "CobaltOre",
+          "item_name_zh": "钴矿",
+          "place_style": 0
+        }
+      ],
+      "108": [
+        {
+          "item_id": 365,
+          "item_name": "MythrilOre",
+          "item_name_zh": "秘银矿",
+          "place_style": 0
+        }
+      ],
+      "111": [
+        {
+          "item_id": 366,
+          "item_name": "AdamantiteOre",
+          "item_name_zh": "精金矿",
+          "place_style": 0
+        }
+      ],
+      "109": [
+        {
+          "item_id": 369,
+          "item_name": "HallowedSeeds",
+          "item_name_zh": "神圣种子",
+          "place_style": 0
+        }
+      ],
+      "112": [
+        {
+          "item_id": 370,
+          "item_name": "EbonsandBlock",
+          "item_name_zh": "黑檀沙块",
+          "place_style": 0
+        }
+      ],
+      "116": [
+        {
+          "item_id": 408,
+          "item_name": "PearlsandBlock",
+          "item_name_zh": "珍珠沙块",
+          "place_style": 0
+        }
+      ],
+      "117": [
+        {
+          "item_id": 409,
+          "item_name": "PearlstoneBlock",
+          "item_name_zh": "珍珠石块",
+          "place_style": 0
+        }
+      ],
+      "118": [
+        {
+          "item_id": 412,
+          "item_name": "PearlstoneBrick",
+          "item_name_zh": "珍珠石砖",
+          "place_style": 0
+        }
+      ],
+      "119": [
+        {
+          "item_id": 413,
+          "item_name": "IridescentBrick",
+          "item_name_zh": "荧光砖",
+          "place_style": 0
+        }
+      ],
+      "120": [
+        {
+          "item_id": 414,
+          "item_name": "MudstoneBlock",
+          "item_name_zh": "泥石砖",
+          "place_style": 0
+        }
+      ],
+      "121": [
+        {
+          "item_id": 415,
+          "item_name": "CobaltBrick",
+          "item_name_zh": "钴砖",
+          "place_style": 0
+        }
+      ],
+      "122": [
+        {
+          "item_id": 416,
+          "item_name": "MythrilBrick",
+          "item_name_zh": "秘银砖",
+          "place_style": 0
+        }
+      ],
+      "123": [
+        {
+          "item_id": 424,
+          "item_name": "SiltBlock",
+          "item_name_zh": "泥沙块",
+          "place_style": 0
+        }
+      ],
+      "124": [
+        {
+          "item_id": 480,
+          "item_name": "WoodenBeam",
+          "item_name_zh": "木梁",
+          "place_style": 0
+        }
+      ],
+      "130": [
+        {
+          "item_id": 511,
+          "item_name": "ActiveStoneBlock",
+          "item_name_zh": "通电石块",
+          "place_style": 0
+        }
+      ],
+      "131": [
+        {
+          "item_id": 512,
+          "item_name": "InactiveStoneBlock",
+          "item_name_zh": "未通电石块",
+          "place_style": 0
+        }
+      ],
+      "140": [
+        {
+          "item_id": 577,
+          "item_name": "DemoniteBrick",
+          "item_name_zh": "魔矿砖",
+          "place_style": 0
+        }
+      ],
+      "145": [
+        {
+          "item_id": 586,
+          "item_name": "CandyCaneBlock",
+          "item_name_zh": "糖棒块",
+          "place_style": 0
+        }
+      ],
+      "146": [
+        {
+          "item_id": 591,
+          "item_name": "GreenCandyCaneBlock",
+          "item_name_zh": "绿糖棒块",
+          "place_style": 0
+        }
+      ],
+      "147": [
+        {
+          "item_id": 593,
+          "item_name": "SnowBlock",
+          "item_name_zh": "雪块",
+          "place_style": 0
+        }
+      ],
+      "148": [
+        {
+          "item_id": 594,
+          "item_name": "SnowBrick",
+          "item_name_zh": "雪砖",
+          "place_style": 0
+        }
+      ],
+      "150": [
+        {
+          "item_id": 604,
+          "item_name": "AdamantiteBeam",
+          "item_name_zh": "精金梁",
+          "place_style": 0
+        }
+      ],
+      "151": [
+        {
+          "item_id": 607,
+          "item_name": "SandstoneBrick",
+          "item_name_zh": "沙岩砖",
+          "place_style": 0
+        }
+      ],
+      "152": [
+        {
+          "item_id": 609,
+          "item_name": "EbonstoneBrick",
+          "item_name_zh": "黑檀石砖",
+          "place_style": 0
+        }
+      ],
+      "153": [
+        {
+          "item_id": 611,
+          "item_name": "RedStucco",
+          "item_name_zh": "红泥灰",
+          "place_style": 0
+        }
+      ],
+      "154": [
+        {
+          "item_id": 612,
+          "item_name": "YellowStucco",
+          "item_name_zh": "黄泥灰",
+          "place_style": 0
+        }
+      ],
+      "155": [
+        {
+          "item_id": 613,
+          "item_name": "GreenStucco",
+          "item_name_zh": "绿泥灰",
+          "place_style": 0
+        }
+      ],
+      "156": [
+        {
+          "item_id": 614,
+          "item_name": "GrayStucco",
+          "item_name_zh": "灰泥灰",
+          "place_style": 0
+        }
+      ],
+      "157": [
+        {
+          "item_id": 619,
+          "item_name": "Ebonwood",
+          "item_name_zh": "乌木",
+          "place_style": 0
+        }
+      ],
+      "158": [
+        {
+          "item_id": 620,
+          "item_name": "RichMahogany",
+          "item_name_zh": "红木",
+          "place_style": 0
+        }
+      ],
+      "159": [
+        {
+          "item_id": 621,
+          "item_name": "Pearlwood",
+          "item_name_zh": "珍珠木",
+          "place_style": 0
+        }
+      ],
+      "160": [
+        {
+          "item_id": 662,
+          "item_name": "RainbowBrick",
+          "item_name_zh": "彩虹砖",
+          "place_style": 0
+        }
+      ],
+      "161": [
+        {
+          "item_id": 664,
+          "item_name": "IceBlock",
+          "item_name_zh": "冰雪块",
+          "place_style": 0
+        }
+      ],
+      "166": [
+        {
+          "item_id": 699,
+          "item_name": "TinOre",
+          "item_name_zh": "锡矿",
+          "place_style": 0
+        }
+      ],
+      "167": [
+        {
+          "item_id": 700,
+          "item_name": "LeadOre",
+          "item_name_zh": "铅矿",
+          "place_style": 0
+        }
+      ],
+      "168": [
+        {
+          "item_id": 701,
+          "item_name": "TungstenOre",
+          "item_name_zh": "钨矿",
+          "place_style": 0
+        }
+      ],
+      "169": [
+        {
+          "item_id": 702,
+          "item_name": "PlatinumOre",
+          "item_name_zh": "铂金矿",
+          "place_style": 0
+        }
+      ],
+      "175": [
+        {
+          "item_id": 717,
+          "item_name": "TinBrick",
+          "item_name_zh": "锡砖",
+          "place_style": 0
+        }
+      ],
+      "176": [
+        {
+          "item_id": 718,
+          "item_name": "TungstenBrick",
+          "item_name_zh": "钨砖",
+          "place_style": 0
+        }
+      ],
+      "177": [
+        {
+          "item_id": 719,
+          "item_name": "PlatinumBrick",
+          "item_name_zh": "铂金砖",
+          "place_style": 0
+        }
+      ],
+      "189": [
+        {
+          "item_id": 751,
+          "item_name": "Cloud",
+          "item_name_zh": "云",
+          "place_style": 0
+        }
+      ],
+      "193": [
+        {
+          "item_id": 762,
+          "item_name": "SlimeBlock",
+          "item_name_zh": "史莱姆块",
+          "place_style": 0
+        }
+      ],
+      "195": [
+        {
+          "item_id": 763,
+          "item_name": "FleshBlock",
+          "item_name_zh": "血肉块",
+          "place_style": 0
+        }
+      ],
+      "196": [
+        {
+          "item_id": 765,
+          "item_name": "RainCloud",
+          "item_name_zh": "雨云",
+          "place_style": 0
+        }
+      ],
+      "194": [
+        {
+          "item_id": 766,
+          "item_name": "BoneBlock",
+          "item_name_zh": "骨块",
+          "place_style": 0
+        },
+        {
+          "item_id": 932,
+          "item_name": "BoneWand",
+          "item_name_zh": "白骨魔棒",
+          "place_style": 0
+        }
+      ],
+      "197": [
+        {
+          "item_id": 767,
+          "item_name": "FrozenSlimeBlock",
+          "item_name_zh": "冰冻史莱姆块",
+          "place_style": 0
+        }
+      ],
+      "198": [
+        {
+          "item_id": 775,
+          "item_name": "AsphaltBlock",
+          "item_name_zh": "沥青块",
+          "place_style": 0
+        }
+      ],
+      "202": [
+        {
+          "item_id": 824,
+          "item_name": "SunplateBlock",
+          "item_name_zh": "日盘块",
+          "place_style": 0
+        }
+      ],
+      "191": [
+        {
+          "item_id": 832,
+          "item_name": "LivingWoodWand",
+          "item_name_zh": "生命木魔棒",
+          "place_style": 0
+        }
+      ],
+      "163": [
+        {
+          "item_id": 833,
+          "item_name": "PurpleIceBlock",
+          "item_name_zh": "紫冰雪块",
+          "place_style": 0
+        }
+      ],
+      "164": [
+        {
+          "item_id": 834,
+          "item_name": "PinkIceBlock",
+          "item_name_zh": "粉冰雪块",
+          "place_style": 0
+        }
+      ],
+      "200": [
+        {
+          "item_id": 835,
+          "item_name": "RedIceBlock",
+          "item_name_zh": "红冰雪块",
+          "place_style": 0
+        }
+      ],
+      "203": [
+        {
+          "item_id": 836,
+          "item_name": "CrimstoneBlock",
+          "item_name_zh": "猩红石块",
+          "place_style": 0
+        }
+      ],
+      "204": [
+        {
+          "item_id": 880,
+          "item_name": "CrimtaneOre",
+          "item_name_zh": "猩红矿",
+          "place_style": 0
+        }
+      ],
+      "206": [
+        {
+          "item_id": 883,
+          "item_name": "IceBrick",
+          "item_name_zh": "冰雪砖",
+          "place_style": 0
+        }
+      ],
+      "208": [
+        {
+          "item_id": 911,
+          "item_name": "Shadewood",
+          "item_name_zh": "暗影木",
+          "place_style": 0
+        }
+      ],
+      "192": [
+        {
+          "item_id": 933,
+          "item_name": "LeafWand",
+          "item_name_zh": "树叶魔棒",
+          "place_style": 0
+        }
+      ],
+      "211": [
+        {
+          "item_id": 947,
+          "item_name": "ChlorophyteOre",
+          "item_name_zh": "叶绿矿",
+          "place_style": 0
+        }
+      ],
+      "213": [
+        {
+          "item_id": 965,
+          "item_name": "Rope",
+          "item_name_zh": "绳",
+          "place_style": 0
+        }
+      ],
+      "226": [
+        {
+          "item_id": 1101,
+          "item_name": "LihzahrdBrick",
+          "item_name_zh": "丛林蜥蜴砖",
+          "place_style": 0
+        }
+      ],
+      "224": [
+        {
+          "item_id": 1103,
+          "item_name": "SlushBlock",
+          "item_name_zh": "雪泥块",
+          "place_style": 0
+        }
+      ],
+      "221": [
+        {
+          "item_id": 1104,
+          "item_name": "PalladiumOre",
+          "item_name_zh": "钯金矿",
+          "place_style": 0
+        }
+      ],
+      "222": [
+        {
+          "item_id": 1105,
+          "item_name": "OrichalcumOre",
+          "item_name_zh": "山铜矿",
+          "place_style": 0
+        }
+      ],
+      "223": [
+        {
+          "item_id": 1106,
+          "item_name": "TitaniumOre",
+          "item_name_zh": "钛金矿",
+          "place_style": 0
+        }
+      ],
+      "229": [
+        {
+          "item_id": 1125,
+          "item_name": "HoneyBlock",
+          "item_name_zh": "蜂蜜块",
+          "place_style": 0
+        }
+      ],
+      "230": [
+        {
+          "item_id": 1127,
+          "item_name": "CrispyHoneyBlock",
+          "item_name_zh": "松脆蜂蜜块",
+          "place_style": 0
+        }
+      ],
+      "225": [
+        {
+          "item_id": 1129,
+          "item_name": "HiveWand",
+          "item_name_zh": "蜂巢魔棒",
+          "place_style": 0
+        }
+      ],
+      "232": [
+        {
+          "item_id": 1150,
+          "item_name": "WoodenSpike",
+          "item_name_zh": "木尖刺",
+          "place_style": 0
+        }
+      ],
+      "234": [
+        {
+          "item_id": 1246,
+          "item_name": "CrimsandBlock",
+          "item_name_zh": "猩红沙块",
+          "place_style": 0
+        }
+      ],
+      "272": [
+        {
+          "item_id": 1344,
+          "item_name": "Cog",
+          "item_name_zh": "齿轮",
+          "place_style": 0
+        }
+      ],
+      "248": [
+        {
+          "item_id": 1589,
+          "item_name": "PalladiumColumn",
+          "item_name_zh": "钯金柱",
+          "place_style": 0
+        }
+      ],
+      "249": [
+        {
+          "item_id": 1591,
+          "item_name": "BubblegumBlock",
+          "item_name_zh": "泡泡糖块",
+          "place_style": 0
+        }
+      ],
+      "250": [
+        {
+          "item_id": 1593,
+          "item_name": "TitanstoneBlock",
+          "item_name_zh": "钛石块",
+          "place_style": 0
+        }
+      ],
+      "251": [
+        {
+          "item_id": 1725,
+          "item_name": "Pumpkin",
+          "item_name_zh": "南瓜",
+          "place_style": 0
+        }
+      ],
+      "252": [
+        {
+          "item_id": 1727,
+          "item_name": "Hay",
+          "item_name_zh": "干草",
+          "place_style": 0
+        }
+      ],
+      "253": [
+        {
+          "item_id": 1729,
+          "item_name": "SpookyWood",
+          "item_name_zh": "阴森木",
+          "place_style": 0
+        }
+      ],
+      "170": [
+        {
+          "item_id": 1872,
+          "item_name": "PineTreeBlock",
+          "item_name_zh": "松树块",
+          "place_style": 0
+        }
+      ],
+      "262": [
+        {
+          "item_id": 1970,
+          "item_name": "AmethystGemsparkBlock",
+          "item_name_zh": "紫晶晶莹宝石块",
+          "place_style": 0
+        }
+      ],
+      "263": [
+        {
+          "item_id": 1971,
+          "item_name": "TopazGemsparkBlock",
+          "item_name_zh": "黄玉晶莹宝石块",
+          "place_style": 0
+        }
+      ],
+      "264": [
+        {
+          "item_id": 1972,
+          "item_name": "SapphireGemsparkBlock",
+          "item_name_zh": "蓝玉晶莹宝石块",
+          "place_style": 0
+        }
+      ],
+      "265": [
+        {
+          "item_id": 1973,
+          "item_name": "EmeraldGemsparkBlock",
+          "item_name_zh": "翡翠晶莹宝石块",
+          "place_style": 0
+        }
+      ],
+      "266": [
+        {
+          "item_id": 1974,
+          "item_name": "RubyGemsparkBlock",
+          "item_name_zh": "红玉晶莹宝石块",
+          "place_style": 0
+        }
+      ],
+      "267": [
+        {
+          "item_id": 1975,
+          "item_name": "DiamondGemsparkBlock",
+          "item_name_zh": "钻石晶莹宝石块",
+          "place_style": 0
+        }
+      ],
+      "268": [
+        {
+          "item_id": 1976,
+          "item_name": "AmberGemsparkBlock",
+          "item_name_zh": "琥珀晶莹宝石块",
+          "place_style": 0
+        }
+      ],
+      "273": [
+        {
+          "item_id": 2119,
+          "item_name": "StoneSlab",
+          "item_name_zh": "石板",
+          "place_style": 0
+        }
+      ],
+      "274": [
+        {
+          "item_id": 2120,
+          "item_name": "SandstoneSlab",
+          "item_name_zh": "沙岩板",
+          "place_style": 0
+        }
+      ],
+      "199": [
+        {
+          "item_id": 2171,
+          "item_name": "CrimsonSeeds",
+          "item_name_zh": "猩红种子",
+          "place_style": 0
+        }
+      ],
+      "284": [
+        {
+          "item_id": 2173,
+          "item_name": "CopperPlating",
+          "item_name_zh": "铜护板",
+          "place_style": 0
+        }
+      ],
+      "311": [
+        {
+          "item_id": 2260,
+          "item_name": "DynastyWood",
+          "item_name_zh": "王朝木",
+          "place_style": 0
+        }
+      ],
+      "312": [
+        {
+          "item_id": 2261,
+          "item_name": "RedDynastyShingles",
+          "item_name_zh": "红王朝瓦",
+          "place_style": 0
+        }
+      ],
+      "313": [
+        {
+          "item_id": 2262,
+          "item_name": "BlueDynastyShingles",
+          "item_name_zh": "蓝王朝瓦",
+          "place_style": 0
+        }
+      ],
+      "315": [
+        {
+          "item_id": 2435,
+          "item_name": "CoralstoneBlock",
+          "item_name_zh": "珊瑚石块",
+          "place_style": 0
+        }
+      ],
+      "321": [
+        {
+          "item_id": 2503,
+          "item_name": "BorealWood",
+          "item_name_zh": "针叶木",
+          "place_style": 0
+        }
+      ],
+      "322": [
+        {
+          "item_id": 2504,
+          "item_name": "PalmWood",
+          "item_name_zh": "棕榈木",
+          "place_style": 0
+        }
+      ],
+      "325": [
+        {
+          "item_id": 2692,
+          "item_name": "TinPlating",
+          "item_name_zh": "锡护板",
+          "place_style": 0
+        }
+      ],
+      "326": [
+        {
+          "item_id": 2693,
+          "item_name": "WaterfallBlock",
+          "item_name_zh": "瀑布块",
+          "place_style": 0
+        }
+      ],
+      "327": [
+        {
+          "item_id": 2694,
+          "item_name": "LavafallBlock",
+          "item_name_zh": "熔岩瀑布块",
+          "place_style": 0
+        }
+      ],
+      "328": [
+        {
+          "item_id": 2695,
+          "item_name": "ConfettiBlock",
+          "item_name_zh": "彩纸块",
+          "place_style": 0
+        }
+      ],
+      "329": [
+        {
+          "item_id": 2697,
+          "item_name": "ConfettiBlockBlack",
+          "item_name_zh": "午夜彩纸块",
+          "place_style": 0
+        }
+      ],
+      "336": [
+        {
+          "item_id": 2701,
+          "item_name": "LivingFireBlock",
+          "item_name_zh": "活火块",
+          "place_style": 0
+        }
+      ],
+      "340": [
+        {
+          "item_id": 2751,
+          "item_name": "LivingCursedFireBlock",
+          "item_name_zh": "诅咒活火块",
+          "place_style": 0
+        }
+      ],
+      "341": [
+        {
+          "item_id": 2752,
+          "item_name": "LivingDemonFireBlock",
+          "item_name_zh": "恶魔活火块",
+          "place_style": 0
+        }
+      ],
+      "342": [
+        {
+          "item_id": 2753,
+          "item_name": "LivingFrostFireBlock",
+          "item_name_zh": "寒霜活火块",
+          "place_style": 0
+        }
+      ],
+      "343": [
+        {
+          "item_id": 2754,
+          "item_name": "LivingIchorBlock",
+          "item_name_zh": "灵液活火块",
+          "place_style": 0
+        }
+      ],
+      "344": [
+        {
+          "item_id": 2755,
+          "item_name": "LivingUltrabrightFireBlock",
+          "item_name_zh": "超亮活火块",
+          "place_style": 0
+        }
+      ],
+      "345": [
+        {
+          "item_id": 2787,
+          "item_name": "HoneyfallBlock",
+          "item_name_zh": "蜂蜜瀑布块",
+          "place_style": 0
+        }
+      ],
+      "346": [
+        {
+          "item_id": 2792,
+          "item_name": "ChlorophyteBrick",
+          "item_name_zh": "叶绿砖",
+          "place_style": 0
+        }
+      ],
+      "347": [
+        {
+          "item_id": 2793,
+          "item_name": "CrimtaneBrick",
+          "item_name_zh": "猩红矿砖",
+          "place_style": 0
+        }
+      ],
+      "348": [
+        {
+          "item_id": 2794,
+          "item_name": "ShroomitePlating",
+          "item_name_zh": "蘑菇矿护板",
+          "place_style": 0
+        }
+      ],
+      "350": [
+        {
+          "item_id": 2860,
+          "item_name": "MartianConduitPlating",
+          "item_name_zh": "火星管道护板",
+          "place_style": 0
+        }
+      ],
+      "351": [
+        {
+          "item_id": 2868,
+          "item_name": "SmokeBlock",
+          "item_name_zh": "烟雾块",
+          "place_style": 0
+        }
+      ],
+      "353": [
+        {
+          "item_id": 2996,
+          "item_name": "VineRope",
+          "item_name_zh": "藤蔓绳",
+          "place_style": 0
+        }
+      ],
+      "357": [
+        {
+          "item_id": 3066,
+          "item_name": "MarbleBlock",
+          "item_name_zh": "光面大理石块",
+          "place_style": 0
+        }
+      ],
+      "365": [
+        {
+          "item_id": 3077,
+          "item_name": "SilkRope",
+          "item_name_zh": "丝绸绳",
+          "place_style": 0
+        }
+      ],
+      "366": [
+        {
+          "item_id": 3078,
+          "item_name": "WebRope",
+          "item_name_zh": "蛛丝绳",
+          "place_style": 0
+        }
+      ],
+      "367": [
+        {
+          "item_id": 3081,
+          "item_name": "Marble",
+          "item_name_zh": "大理石块",
+          "place_style": 0
+        }
+      ],
+      "368": [
+        {
+          "item_id": 3086,
+          "item_name": "Granite",
+          "item_name_zh": "花岗岩块",
+          "place_style": 0
+        }
+      ],
+      "369": [
+        {
+          "item_id": 3087,
+          "item_name": "GraniteBlock",
+          "item_name_zh": "光面花岗岩块",
+          "place_style": 0
+        }
+      ],
+      "370": [
+        {
+          "item_id": 3100,
+          "item_name": "MeteoriteBrick",
+          "item_name_zh": "陨石砖",
+          "place_style": 0
+        }
+      ],
+      "371": [
+        {
+          "item_id": 3113,
+          "item_name": "PinkSlimeBlock",
+          "item_name_zh": "粉史莱姆块",
+          "place_style": 0
+        }
+      ],
+      "379": [
+        {
+          "item_id": 3214,
+          "item_name": "Bubble",
+          "item_name_zh": "泡泡",
+          "place_style": 0
+        }
+      ],
+      "385": [
+        {
+          "item_id": 3234,
+          "item_name": "CrystalBlock",
+          "item_name_zh": "水晶块",
+          "place_style": 0
+        }
+      ],
+      "396": [
+        {
+          "item_id": 3271,
+          "item_name": "Sandstone",
+          "item_name_zh": "沙岩块",
+          "place_style": 0
+        }
+      ],
+      "397": [
+        {
+          "item_id": 3272,
+          "item_name": "HardenedSand",
+          "item_name_zh": "硬化沙块",
+          "place_style": 0
+        }
+      ],
+      "398": [
+        {
+          "item_id": 3274,
+          "item_name": "CorruptHardenedSand",
+          "item_name_zh": "硬化黑檀沙块",
+          "place_style": 0
+        }
+      ],
+      "399": [
+        {
+          "item_id": 3275,
+          "item_name": "CrimsonHardenedSand",
+          "item_name_zh": "硬化猩红沙块",
+          "place_style": 0
+        }
+      ],
+      "400": [
+        {
+          "item_id": 3276,
+          "item_name": "CorruptSandstone",
+          "item_name_zh": "黑檀沙岩块",
+          "place_style": 0
+        }
+      ],
+      "401": [
+        {
+          "item_id": 3277,
+          "item_name": "CrimsonSandstone",
+          "item_name_zh": "猩红沙岩块",
+          "place_style": 0
+        }
+      ],
+      "402": [
+        {
+          "item_id": 3338,
+          "item_name": "HallowHardenedSand",
+          "item_name_zh": "硬化珍珠沙块",
+          "place_style": 0
+        }
+      ],
+      "403": [
+        {
+          "item_id": 3339,
+          "item_name": "HallowSandstone",
+          "item_name_zh": "珍珠沙岩块",
+          "place_style": 0
+        }
+      ],
+      "404": [
+        {
+          "item_id": 3347,
+          "item_name": "DesertFossil",
+          "item_name_zh": "沙漠化石",
+          "place_style": 0
+        }
+      ],
+      "383": [
+        {
+          "item_id": 3360,
+          "item_name": "LivingMahoganyWand",
+          "item_name_zh": "生命红木魔棒",
+          "place_style": 0
+        }
+      ],
+      "384": [
+        {
+          "item_id": 3361,
+          "item_name": "LivingMahoganyLeafWand",
+          "item_name_zh": "红木树叶魔棒",
+          "place_style": 0
+        }
+      ],
+      "407": [
+        {
+          "item_id": 3380,
+          "item_name": "FossilOre",
+          "item_name_zh": "坚固化石",
+          "place_style": 0
+        }
+      ],
+      "408": [
+        {
+          "item_id": 3460,
+          "item_name": "LunarOre",
+          "item_name_zh": "夜明矿",
+          "place_style": 0
+        }
+      ],
+      "409": [
+        {
+          "item_id": 3461,
+          "item_name": "LunarBrick",
+          "item_name_zh": "夜明砖",
+          "place_style": 0
+        }
+      ],
+      "415": [
+        {
+          "item_id": 3573,
+          "item_name": "LunarBlockSolar",
+          "item_name_zh": "日耀碎片块",
+          "place_style": 0
+        }
+      ],
+      "416": [
+        {
+          "item_id": 3574,
+          "item_name": "LunarBlockVortex",
+          "item_name_zh": "星旋碎片块",
+          "place_style": 0
+        }
+      ],
+      "417": [
+        {
+          "item_id": 3575,
+          "item_name": "LunarBlockNebula",
+          "item_name_zh": "星云碎片块",
+          "place_style": 0
+        }
+      ],
+      "418": [
+        {
+          "item_id": 3576,
+          "item_name": "LunarBlockStardust",
+          "item_name_zh": "星尘碎片块",
+          "place_style": 0
+        }
+      ],
+      "421": [
+        {
+          "item_id": 3609,
+          "item_name": "ConveyorBeltLeft",
+          "item_name_zh": "传送带（顺时针）",
+          "place_style": 0
+        }
+      ],
+      "422": [
+        {
+          "item_id": 3610,
+          "item_name": "ConveyorBeltRight",
+          "item_name_zh": "传送带（逆时针）",
+          "place_style": 0
+        }
+      ],
+      "426": [
+        {
+          "item_id": 3621,
+          "item_name": "TeamBlockRed",
+          "item_name_zh": "红团队块",
+          "place_style": 0
+        }
+      ],
+      "430": [
+        {
+          "item_id": 3633,
+          "item_name": "TeamBlockGreen",
+          "item_name_zh": "绿团队块",
+          "place_style": 0
+        }
+      ],
+      "431": [
+        {
+          "item_id": 3634,
+          "item_name": "TeamBlockBlue",
+          "item_name_zh": "蓝团队块",
+          "place_style": 0
+        }
+      ],
+      "432": [
+        {
+          "item_id": 3635,
+          "item_name": "TeamBlockYellow",
+          "item_name_zh": "黄团队块",
+          "place_style": 0
+        }
+      ],
+      "433": [
+        {
+          "item_id": 3636,
+          "item_name": "TeamBlockPink",
+          "item_name_zh": "粉团队块",
+          "place_style": 0
+        }
+      ],
+      "434": [
+        {
+          "item_id": 3637,
+          "item_name": "TeamBlockWhite",
+          "item_name_zh": "白团队块",
+          "place_style": 0
+        }
+      ],
+      "446": [
+        {
+          "item_id": 3736,
+          "item_name": "SillyBalloonPink",
+          "item_name_zh": "呆萌粉气球",
+          "place_style": 0
+        }
+      ],
+      "447": [
+        {
+          "item_id": 3737,
+          "item_name": "SillyBalloonPurple",
+          "item_name_zh": "呆萌紫气球",
+          "place_style": 0
+        }
+      ],
+      "448": [
+        {
+          "item_id": 3738,
+          "item_name": "SillyBalloonGreen",
+          "item_name_zh": "呆萌绿气球",
+          "place_style": 0
+        }
+      ],
+      "449": [
+        {
+          "item_id": 3739,
+          "item_name": "SillyStreamerBlue",
+          "item_name_zh": "蓝饰带",
+          "place_style": 0
+        }
+      ],
+      "450": [
+        {
+          "item_id": 3740,
+          "item_name": "SillyStreamerGreen",
+          "item_name_zh": "绿饰带",
+          "place_style": 0
+        }
+      ],
+      "451": [
+        {
+          "item_id": 3741,
+          "item_name": "SillyStreamerPink",
+          "item_name_zh": "粉饰带",
+          "place_style": 0
+        }
+      ],
+      "458": [
+        {
+          "item_id": 3754,
+          "item_name": "SandFallBlock",
+          "item_name_zh": "落沙块",
+          "place_style": 0
+        }
+      ],
+      "459": [
+        {
+          "item_id": 3755,
+          "item_name": "SnowFallBlock",
+          "item_name_zh": "降雪块",
+          "place_style": 0
+        }
+      ],
+      "460": [
+        {
+          "item_id": 3756,
+          "item_name": "SnowCloudBlock",
+          "item_name_zh": "雪云",
+          "place_style": 0
+        }
+      ],
+      "472": [
+        {
+          "item_id": 3951,
+          "item_name": "IronBrick",
+          "item_name_zh": "铁砖",
+          "place_style": 0
+        }
+      ],
+      "473": [
+        {
+          "item_id": 3953,
+          "item_name": "LeadBrick",
+          "item_name_zh": "铅砖",
+          "place_style": 0
+        }
+      ],
+      "474": [
+        {
+          "item_id": 3955,
+          "item_name": "LesionBlock",
+          "item_name_zh": "病变块",
+          "place_style": 0
+        }
+      ],
+      "478": [
+        {
+          "item_id": 4050,
+          "item_name": "CrimstoneBrick",
+          "item_name_zh": "猩红石砖",
+          "place_style": 0
+        }
+      ],
+      "479": [
+        {
+          "item_id": 4051,
+          "item_name": "SmoothSandstone",
+          "item_name_zh": "光面沙岩",
+          "place_style": 0
+        }
+      ],
+      "495": [
+        {
+          "item_id": 4090,
+          "item_name": "ShellPileBlock",
+          "item_name_zh": "贝壳堆",
+          "place_style": 0
+        }
+      ],
+      "496": [
+        {
+          "item_id": 4091,
+          "item_name": "AntiPortalBlock",
+          "item_name_zh": "反传送门块",
+          "place_style": 0
+        }
+      ],
+      "498": [
+        {
+          "item_id": 4139,
+          "item_name": "SpiderBlock",
+          "item_name_zh": "蜘蛛窝块",
+          "place_style": 0
+        }
+      ],
+      "500": [
+        {
+          "item_id": 4229,
+          "item_name": "SolarBrick",
+          "item_name_zh": "日耀砖",
+          "place_style": 0
+        }
+      ],
+      "501": [
+        {
+          "item_id": 4230,
+          "item_name": "VortexBrick",
+          "item_name_zh": "星旋砖",
+          "place_style": 0
+        }
+      ],
+      "502": [
+        {
+          "item_id": 4231,
+          "item_name": "NebulaBrick",
+          "item_name_zh": "星云砖",
+          "place_style": 0
+        }
+      ],
+      "503": [
+        {
+          "item_id": 4232,
+          "item_name": "StardustBrick",
+          "item_name_zh": "星尘砖",
+          "place_style": 0
+        }
+      ],
+      "481": [
+        {
+          "item_id": 4238,
+          "item_name": "CrackedBlueBrick",
+          "item_name_zh": "破裂蓝砖",
+          "place_style": 0
+        }
+      ],
+      "482": [
+        {
+          "item_id": 4239,
+          "item_name": "CrackedGreenBrick",
+          "item_name_zh": "破裂绿砖",
+          "place_style": 0
+        }
+      ],
+      "483": [
+        {
+          "item_id": 4240,
+          "item_name": "CrackedPinkBrick",
+          "item_name_zh": "破裂粉砖",
+          "place_style": 0
+        }
+      ],
+      "507": [
+        {
+          "item_id": 4277,
+          "item_name": "GoldStarryGlassBlock",
+          "item_name_zh": "金星块",
+          "place_style": 0
+        }
+      ],
+      "508": [
+        {
+          "item_id": 4278,
+          "item_name": "BlueStarryGlassBlock",
+          "item_name_zh": "蓝星块",
+          "place_style": 0
+        }
+      ],
+      "179": [
+        {
+          "item_id": 4349,
+          "item_name": "GreenMoss",
+          "item_name_zh": "绿苔藓",
+          "place_style": 0
+        }
+      ],
+      "180": [
+        {
+          "item_id": 4350,
+          "item_name": "BrownMoss",
+          "item_name_zh": "棕苔藓",
+          "place_style": 0
+        }
+      ],
+      "181": [
+        {
+          "item_id": 4351,
+          "item_name": "RedMoss",
+          "item_name_zh": "红苔藓",
+          "place_style": 0
+        }
+      ],
+      "182": [
+        {
+          "item_id": 4352,
+          "item_name": "BlueMoss",
+          "item_name_zh": "蓝苔藓",
+          "place_style": 0
+        }
+      ],
+      "183": [
+        {
+          "item_id": 4353,
+          "item_name": "PurpleMoss",
+          "item_name_zh": "紫苔藓",
+          "place_style": 0
+        }
+      ],
+      "381": [
+        {
+          "item_id": 4354,
+          "item_name": "LavaMoss",
+          "item_name_zh": "熔岩苔藓",
+          "place_style": 0
+        }
+      ],
+      "534": [
+        {
+          "item_id": 4377,
+          "item_name": "KryptonMoss",
+          "item_name_zh": "氪苔藓",
+          "place_style": 0
+        }
+      ],
+      "536": [
+        {
+          "item_id": 4378,
+          "item_name": "XenonMoss",
+          "item_name_zh": "氙苔藓",
+          "place_style": 0
+        }
+      ],
+      "539": [
+        {
+          "item_id": 4389,
+          "item_name": "ArgonMoss",
+          "item_name_zh": "氩苔藓",
+          "place_style": 0
+        }
+      ],
+      "162": [
+        {
+          "item_id": 4391,
+          "item_name": "ThinIce",
+          "item_name_zh": "薄冰",
+          "place_style": 0
+        }
+      ],
+      "541": [
+        {
+          "item_id": 4392,
+          "item_name": "EchoBlock",
+          "item_name_zh": "回声块",
+          "place_style": 0
+        }
+      ],
+      "546": [
+        {
+          "item_id": 4422,
+          "item_name": "Grate",
+          "item_name_zh": "格栅",
+          "place_style": 0
+        }
+      ],
+      "563": [
+        {
+          "item_id": 4547,
+          "item_name": "LargeBambooBlock",
+          "item_name_zh": "大竹子",
+          "place_style": 0
+        }
+      ],
+      "561": [
+        {
+          "item_id": 4554,
+          "item_name": "MarbleColumn",
+          "item_name_zh": "大理石柱",
+          "place_style": 0
+        }
+      ],
+      "562": [
+        {
+          "item_id": 4564,
+          "item_name": "BambooBlock",
+          "item_name_zh": "竹子",
+          "place_style": 0
+        }
+      ],
+      "67": [
+        {
+          "item_id": 4640,
+          "item_name": "AmethystStoneBlock",
+          "item_name_zh": "紫晶石块",
+          "place_style": 0
+        }
+      ],
+      "66": [
+        {
+          "item_id": 4641,
+          "item_name": "TopazStoneBlock",
+          "item_name_zh": "黄玉石块",
+          "place_style": 0
+        }
+      ],
+      "63": [
+        {
+          "item_id": 4642,
+          "item_name": "SapphireStoneBlock",
+          "item_name_zh": "蓝玉石块",
+          "place_style": 0
+        }
+      ],
+      "65": [
+        {
+          "item_id": 4643,
+          "item_name": "EmeraldStoneBlock",
+          "item_name_zh": "翡翠石块",
+          "place_style": 0
+        }
+      ],
+      "64": [
+        {
+          "item_id": 4644,
+          "item_name": "RubyStoneBlock",
+          "item_name_zh": "红玉石块",
+          "place_style": 0
+        }
+      ],
+      "68": [
+        {
+          "item_id": 4645,
+          "item_name": "DiamondStoneBlock",
+          "item_name_zh": "钻石石块",
+          "place_style": 0
+        }
+      ],
+      "566": [
+        {
+          "item_id": 4646,
+          "item_name": "AmberStoneBlock",
+          "item_name_zh": "琥珀石块",
+          "place_style": 0
+        }
+      ],
+      "574": [
+        {
+          "item_id": 4717,
+          "item_name": "BorealBeam",
+          "item_name_zh": "针叶木梁",
+          "place_style": 0
+        }
+      ],
+      "575": [
+        {
+          "item_id": 4718,
+          "item_name": "RichMahoganyBeam",
+          "item_name_zh": "红木梁",
+          "place_style": 0
+        }
+      ],
+      "576": [
+        {
+          "item_id": 4719,
+          "item_name": "GraniteColumn",
+          "item_name_zh": "花岗岩柱",
+          "place_style": 0
+        }
+      ],
+      "577": [
+        {
+          "item_id": 4720,
+          "item_name": "SandstoneColumn",
+          "item_name_zh": "沙岩柱",
+          "place_style": 0
+        }
+      ],
+      "578": [
+        {
+          "item_id": 4721,
+          "item_name": "MushroomBeam",
+          "item_name_zh": "蘑菇梁",
+          "place_style": 0
+        }
+      ],
+      "618": [
+        {
+          "item_id": 4962,
+          "item_name": "AccentSlab",
+          "item_name_zh": "石材板",
+          "place_style": 0
+        }
+      ],
+      "625": [
+        {
+          "item_id": 5127,
+          "item_name": "VioletMoss",
+          "item_name_zh": "氖苔藓",
+          "place_style": 0
+        }
+      ],
+      "627": [
+        {
+          "item_id": 5128,
+          "item_name": "RainbowMoss",
+          "item_name_zh": "氦苔藓",
+          "place_style": 0
+        }
+      ],
+      "633": [
+        {
+          "item_id": 5214,
+          "item_name": "AshGrassSeeds",
+          "item_name_zh": "灰烬草种子",
+          "place_style": 0
+        }
+      ],
+      "635": [
+        {
+          "item_id": 5215,
+          "item_name": "AshWood",
+          "item_name_zh": "灰烬木",
+          "place_style": 0
+        }
+      ],
+      "641": [
+        {
+          "item_id": 5306,
+          "item_name": "ReefBlock",
+          "item_name_zh": "珊瑚礁块",
+          "place_style": 0
+        }
+      ],
+      "659": [
+        {
+          "item_id": 5349,
+          "item_name": "ShimmerBlock",
+          "item_name_zh": "以太块",
+          "place_style": 0
+        }
+      ],
+      "666": [
+        {
+          "item_id": 5395,
+          "item_name": "PoopBlock",
+          "item_name_zh": "臭臭",
+          "place_style": 0
+        }
+      ],
+      "667": [
+        {
+          "item_id": 5398,
+          "item_name": "ShimmerBrick",
+          "item_name_zh": "以太砖",
+          "place_style": 0
+        }
+      ],
+      "669": [
+        {
+          "item_id": 5401,
+          "item_name": "LunarRustBrick",
+          "item_name_zh": "月锈砖",
+          "place_style": 0
+        }
+      ],
+      "670": [
+        {
+          "item_id": 5402,
+          "item_name": "DarkCelestialBrick",
+          "item_name_zh": "暗黑天界砖",
+          "place_style": 0
+        }
+      ],
+      "671": [
+        {
+          "item_id": 5403,
+          "item_name": "AstraBrick",
+          "item_name_zh": "星芒砖",
+          "place_style": 0
+        }
+      ],
+      "672": [
+        {
+          "item_id": 5404,
+          "item_name": "CosmicEmberBrick",
+          "item_name_zh": "宇宙余烬砖",
+          "place_style": 0
+        }
+      ],
+      "673": [
+        {
+          "item_id": 5405,
+          "item_name": "CryocoreBrick",
+          "item_name_zh": "冷核砖",
+          "place_style": 0
+        }
+      ],
+      "674": [
+        {
+          "item_id": 5406,
+          "item_name": "MercuryBrick",
+          "item_name_zh": "水星砖",
+          "place_style": 0
+        }
+      ],
+      "675": [
+        {
+          "item_id": 5407,
+          "item_name": "StarRoyaleBrick",
+          "item_name_zh": "星星皇家砖",
+          "place_style": 0
+        }
+      ],
+      "676": [
+        {
+          "item_id": 5408,
+          "item_name": "HeavenforgeBrick",
+          "item_name_zh": "天熔砖",
+          "place_style": 0
+        }
+      ],
+      "677": [
+        {
+          "item_id": 5417,
+          "item_name": "AncientBlueDungeonBrick",
+          "item_name_zh": "远古蓝砖",
+          "place_style": 0
+        }
+      ],
+      "678": [
+        {
+          "item_id": 5419,
+          "item_name": "AncientGreenDungeonBrick",
+          "item_name_zh": "远古绿砖",
+          "place_style": 0
+        }
+      ],
+      "679": [
+        {
+          "item_id": 5421,
+          "item_name": "AncientPinkDungeonBrick",
+          "item_name_zh": "远古粉砖",
+          "place_style": 0
+        }
+      ],
+      "680": [
+        {
+          "item_id": 5423,
+          "item_name": "AncientGoldBrick",
+          "item_name_zh": "远古金砖",
+          "place_style": 0
+        }
+      ],
+      "681": [
+        {
+          "item_id": 5425,
+          "item_name": "AncientSilverBrick",
+          "item_name_zh": "远古银砖",
+          "place_style": 0
+        }
+      ],
+      "682": [
+        {
+          "item_id": 5427,
+          "item_name": "AncientCopperBrick",
+          "item_name_zh": "远古铜砖",
+          "place_style": 0
+        }
+      ],
+      "685": [
+        {
+          "item_id": 5429,
+          "item_name": "AncientCobaltBrick",
+          "item_name_zh": "远古钴砖",
+          "place_style": 0
+        }
+      ],
+      "686": [
+        {
+          "item_id": 5431,
+          "item_name": "AncientMythrilBrick",
+          "item_name_zh": "远古秘银砖",
+          "place_style": 0
+        }
+      ],
+      "683": [
+        {
+          "item_id": 5433,
+          "item_name": "AncientObsidianBrick",
+          "item_name_zh": "远古黑曜石砖",
+          "place_style": 0
+        }
+      ],
+      "684": [
+        {
+          "item_id": 5435,
+          "item_name": "AncientHellstoneBrick",
+          "item_name_zh": "远古狱石砖",
+          "place_style": 0
+        }
+      ],
+      "687": [
+        {
+          "item_id": 5439,
+          "item_name": "LavaMossBlock",
+          "item_name_zh": "熔岩苔藓砖",
+          "place_style": 0
+        }
+      ],
+      "688": [
+        {
+          "item_id": 5440,
+          "item_name": "ArgonMossBlock",
+          "item_name_zh": "氩苔藓砖",
+          "place_style": 0
+        }
+      ],
+      "689": [
+        {
+          "item_id": 5441,
+          "item_name": "KryptonMossBlock",
+          "item_name_zh": "氪苔藓砖",
+          "place_style": 0
+        }
+      ],
+      "690": [
+        {
+          "item_id": 5442,
+          "item_name": "XenonMossBlock",
+          "item_name_zh": "氙苔藓砖",
+          "place_style": 0
+        }
+      ],
+      "691": [
+        {
+          "item_id": 5443,
+          "item_name": "VioletMossBlock",
+          "item_name_zh": "氖苔藓砖",
+          "place_style": 0
+        }
+      ],
+      "692": [
+        {
+          "item_id": 5444,
+          "item_name": "RainbowMossBlock",
+          "item_name_zh": "氦苔藓砖",
+          "place_style": 0
+        }
+      ],
+      "708": [
+        {
+          "item_id": 5493,
+          "item_name": "ShimmerFallBlock",
+          "item_name_zh": "微光瀑布块",
+          "place_style": 0
+        }
+      ],
+      "717": [
+        {
+          "item_id": 5569,
+          "item_name": "LavaCloud",
+          "item_name_zh": "熔岩云",
+          "place_style": 0
+        }
+      ],
+      "718": [
+        {
+          "item_id": 5570,
+          "item_name": "StarCloud",
+          "item_name_zh": "星云",
+          "place_style": 0
+        }
+      ],
+      "719": [
+        {
+          "item_id": 5571,
+          "item_name": "RainbowCloud",
+          "item_name_zh": "彩虹云",
+          "place_style": 0
+        }
+      ],
+      "722": [
+        {
+          "item_id": 5622,
+          "item_name": "FallenStarBlock",
+          "item_name_zh": "坠落之星块",
+          "place_style": 0
+        }
+      ],
+      "727": [
+        {
+          "item_id": 5674,
+          "item_name": "TeamBlockRedVariant",
+          "item_name_zh": "暗淡红队块",
+          "place_style": 0
+        }
+      ],
+      "728": [
+        {
+          "item_id": 5675,
+          "item_name": "TeamBlockGreenVariant",
+          "item_name_zh": "暗淡绿队块",
+          "place_style": 0
+        }
+      ],
+      "729": [
+        {
+          "item_id": 5676,
+          "item_name": "TeamBlockBlueVariant",
+          "item_name_zh": "暗淡蓝队块",
+          "place_style": 0
+        }
+      ],
+      "730": [
+        {
+          "item_id": 5677,
+          "item_name": "TeamBlockYellowVariant",
+          "item_name_zh": "暗淡黄队块",
+          "place_style": 0
+        }
+      ],
+      "731": [
+        {
+          "item_id": 5678,
+          "item_name": "TeamBlockPinkVariant",
+          "item_name_zh": "暗淡粉队块",
+          "place_style": 0
+        }
+      ],
+      "732": [
+        {
+          "item_id": 5679,
+          "item_name": "TeamBlockWhiteVariant",
+          "item_name_zh": "暗淡白队块",
+          "place_style": 0
+        }
+      ],
+      "734": [
+        {
+          "item_id": 5710,
+          "item_name": "Feywood",
+          "item_name_zh": "仙林",
+          "place_style": 0
+        }
+      ],
+      "735": [
+        {
+          "item_id": 5733,
+          "item_name": "HallowedBrick",
+          "item_name_zh": "神圣砖",
+          "place_style": 0
+        }
+      ],
+      "736": [
+        {
+          "item_id": 5920,
+          "item_name": "EasterBlock",
+          "item_name_zh": "复活节物块",
+          "place_style": 0
+        }
+      ],
+      "737": [
+        {
+          "item_id": 5922,
+          "item_name": "GothicBrick",
+          "item_name_zh": "哥特砖",
+          "place_style": 0
+        }
+      ],
+      "738": [
+        {
+          "item_id": 5924,
+          "item_name": "FlinxFurBlock",
+          "item_name_zh": "小雪怪皮物块",
+          "place_style": 0
+        }
+      ],
+      "739": [
+        {
+          "item_id": 5926,
+          "item_name": "JellyfishBlock",
+          "item_name_zh": "水母物块",
+          "place_style": 0
+        }
+      ],
+      "740": [
+        {
+          "item_id": 5928,
+          "item_name": "ToyBreakerBlock",
+          "item_name_zh": "玩具毁灭者砖",
+          "place_style": 0
+        }
+      ],
+      "741": [
+        {
+          "item_id": 5930,
+          "item_name": "PineWoodBlock",
+          "item_name_zh": "松木",
+          "place_style": 0
+        }
+      ],
+      "742": [
+        {
+          "item_id": 5953,
+          "item_name": "HarpyBlock",
+          "item_name_zh": "鹰身女妖块",
+          "place_style": 0
+        }
+      ],
+      "743": [
+        {
+          "item_id": 5996,
+          "item_name": "MoonplateBlock",
+          "item_name_zh": "月盘块",
+          "place_style": 0
+        }
+      ],
+      "744": [
+        {
+          "item_id": 6019,
+          "item_name": "LibrarianBlock",
+          "item_name_zh": "图书管理员块",
+          "place_style": 0
+        }
+      ],
+      "745": [
+        {
+          "item_id": 6042,
+          "item_name": "SpikeBlock",
+          "item_name_zh": "尖刺块",
+          "place_style": 0
+        }
+      ],
+      "746": [
+        {
+          "item_id": 6065,
+          "item_name": "OfficeBlock",
+          "item_name_zh": "办公块",
+          "place_style": 0
+        }
+      ],
+      "747": [
+        {
+          "item_id": 6088,
+          "item_name": "ForbiddenBlock",
+          "item_name_zh": "禁戒块",
+          "place_style": 0
+        }
+      ],
+      "748": [
+        {
+          "item_id": 6109,
+          "item_name": "WaterBlock",
+          "item_name_zh": "水族块",
+          "place_style": 0
+        }
+      ],
+      "749": [
+        {
+          "item_id": 6132,
+          "item_name": "BoulderBlock",
+          "item_name_zh": "巨石块",
+          "place_style": 0
+        }
+      ],
+      "750": [
+        {
+          "item_id": 6134,
+          "item_name": "DamagingSpikeBlock",
+          "item_name_zh": "锋利尖刺块",
+          "place_style": 0
+        }
+      ]
+    },
+    "wall": {
+      "1": [
+        {
+          "item_id": 26,
+          "item_name": "StoneWall",
+          "item_name_zh": "石墙",
+          "place_style": 0
+        }
+      ],
+      "16": [
+        {
+          "item_id": 30,
+          "item_name": "DirtWall",
+          "item_name_zh": "土墙",
+          "place_style": 0
+        }
+      ],
+      "4": [
+        {
+          "item_id": 93,
+          "item_name": "WoodWall",
+          "item_name_zh": "木墙",
+          "place_style": 0
+        }
+      ],
+      "5": [
+        {
+          "item_id": 130,
+          "item_name": "GrayBrickWall",
+          "item_name_zh": "灰砖墙",
+          "place_style": 0
+        }
+      ],
+      "6": [
+        {
+          "item_id": 132,
+          "item_name": "RedBrickWall",
+          "item_name_zh": "红砖墙",
+          "place_style": 0
+        }
+      ],
+      "17": [
+        {
+          "item_id": 135,
+          "item_name": "BlueBrickWall",
+          "item_name_zh": "蓝砖墙",
+          "place_style": 0
+        }
+      ],
+      "18": [
+        {
+          "item_id": 138,
+          "item_name": "GreenBrickWall",
+          "item_name_zh": "绿砖墙",
+          "place_style": 0
+        }
+      ],
+      "19": [
+        {
+          "item_id": 140,
+          "item_name": "PinkBrickWall",
+          "item_name_zh": "粉砖墙",
+          "place_style": 0
+        }
+      ],
+      "10": [
+        {
+          "item_id": 142,
+          "item_name": "GoldBrickWall",
+          "item_name_zh": "金砖墙",
+          "place_style": 0
+        }
+      ],
+      "11": [
+        {
+          "item_id": 144,
+          "item_name": "SilverBrickWall",
+          "item_name_zh": "银砖墙",
+          "place_style": 0
+        }
+      ],
+      "12": [
+        {
+          "item_id": 146,
+          "item_name": "CopperBrickWall",
+          "item_name_zh": "铜砖墙",
+          "place_style": 0
+        }
+      ],
+      "20": [
+        {
+          "item_id": 330,
+          "item_name": "ObsidianBrickWall",
+          "item_name_zh": "黑曜石砖墙",
+          "place_style": 0
+        }
+      ],
+      "21": [
+        {
+          "item_id": 392,
+          "item_name": "GlassWall",
+          "item_name_zh": "玻璃墙",
+          "place_style": 0
+        }
+      ],
+      "22": [
+        {
+          "item_id": 417,
+          "item_name": "PearlstoneBrickWall",
+          "item_name_zh": "珍珠石砖墙",
+          "place_style": 0
+        }
+      ],
+      "23": [
+        {
+          "item_id": 418,
+          "item_name": "IridescentBrickWall",
+          "item_name_zh": "荧光砖墙",
+          "place_style": 0
+        }
+      ],
+      "24": [
+        {
+          "item_id": 419,
+          "item_name": "MudstoneBrickWall",
+          "item_name_zh": "泥石砖墙",
+          "place_style": 0
+        }
+      ],
+      "25": [
+        {
+          "item_id": 420,
+          "item_name": "CobaltBrickWall",
+          "item_name_zh": "钴砖墙",
+          "place_style": 0
+        }
+      ],
+      "26": [
+        {
+          "item_id": 421,
+          "item_name": "MythrilBrickWall",
+          "item_name_zh": "秘银砖墙",
+          "place_style": 0
+        }
+      ],
+      "27": [
+        {
+          "item_id": 479,
+          "item_name": "PlankedWall",
+          "item_name_zh": "板条墙",
+          "place_style": 0
+        }
+      ],
+      "29": [
+        {
+          "item_id": 587,
+          "item_name": "CandyCaneWall",
+          "item_name_zh": "糖棒墙",
+          "place_style": 0
+        }
+      ],
+      "30": [
+        {
+          "item_id": 592,
+          "item_name": "GreenCandyCaneWall",
+          "item_name_zh": "绿糖棒墙",
+          "place_style": 0
+        }
+      ],
+      "31": [
+        {
+          "item_id": 595,
+          "item_name": "SnowBrickWall",
+          "item_name_zh": "雪砖墙",
+          "place_style": 0
+        }
+      ],
+      "32": [
+        {
+          "item_id": 605,
+          "item_name": "AdamantiteBeamWall",
+          "item_name_zh": "精金梁墙",
+          "place_style": 0
+        }
+      ],
+      "33": [
+        {
+          "item_id": 606,
+          "item_name": "DemoniteBrickWall",
+          "item_name_zh": "魔矿砖墙",
+          "place_style": 0
+        }
+      ],
+      "34": [
+        {
+          "item_id": 608,
+          "item_name": "SandstoneBrickWall",
+          "item_name_zh": "沙岩砖墙",
+          "place_style": 0
+        }
+      ],
+      "35": [
+        {
+          "item_id": 610,
+          "item_name": "EbonstoneBrickWall",
+          "item_name_zh": "黑檀石砖墙",
+          "place_style": 0
+        }
+      ],
+      "36": [
+        {
+          "item_id": 615,
+          "item_name": "RedStuccoWall",
+          "item_name_zh": "红泥灰墙",
+          "place_style": 0
+        }
+      ],
+      "37": [
+        {
+          "item_id": 616,
+          "item_name": "YellowStuccoWall",
+          "item_name_zh": "黄泥灰墙",
+          "place_style": 0
+        }
+      ],
+      "38": [
+        {
+          "item_id": 617,
+          "item_name": "GreenStuccoWall",
+          "item_name_zh": "绿泥灰墙",
+          "place_style": 0
+        }
+      ],
+      "39": [
+        {
+          "item_id": 618,
+          "item_name": "GrayStuccoWall",
+          "item_name_zh": "灰泥灰墙",
+          "place_style": 0
+        }
+      ],
+      "41": [
+        {
+          "item_id": 622,
+          "item_name": "EbonwoodWall",
+          "item_name_zh": "乌木墙",
+          "place_style": 0
+        }
+      ],
+      "42": [
+        {
+          "item_id": 623,
+          "item_name": "RichMahoganyWall",
+          "item_name_zh": "红木墙",
+          "place_style": 0
+        }
+      ],
+      "43": [
+        {
+          "item_id": 624,
+          "item_name": "PearlwoodWall",
+          "item_name_zh": "珍珠木墙",
+          "place_style": 0
+        }
+      ],
+      "44": [
+        {
+          "item_id": 663,
+          "item_name": "RainbowBrickWall",
+          "item_name_zh": "彩虹砖墙",
+          "place_style": 0
+        }
+      ],
+      "45": [
+        {
+          "item_id": 720,
+          "item_name": "TinBrickWall",
+          "item_name_zh": "锡砖墙",
+          "place_style": 0
+        }
+      ],
+      "46": [
+        {
+          "item_id": 721,
+          "item_name": "TungstenBrickWall",
+          "item_name_zh": "钨砖墙",
+          "place_style": 0
+        }
+      ],
+      "47": [
+        {
+          "item_id": 722,
+          "item_name": "PlatinumBrickWall",
+          "item_name_zh": "铂金砖墙",
+          "place_style": 0
+        }
+      ],
+      "66": [
+        {
+          "item_id": 745,
+          "item_name": "GrassWall",
+          "item_name_zh": "草墙",
+          "place_style": 0
+        }
+      ],
+      "67": [
+        {
+          "item_id": 746,
+          "item_name": "JungleWall",
+          "item_name_zh": "丛林墙",
+          "place_style": 0
+        }
+      ],
+      "68": [
+        {
+          "item_id": 747,
+          "item_name": "FlowerWall",
+          "item_name_zh": "花墙",
+          "place_style": 0
+        }
+      ],
+      "72": [
+        {
+          "item_id": 750,
+          "item_name": "CactusWall",
+          "item_name_zh": "仙人掌墙",
+          "place_style": 0
+        }
+      ],
+      "73": [
+        {
+          "item_id": 752,
+          "item_name": "CloudWall",
+          "item_name_zh": "云墙",
+          "place_style": 0
+        }
+      ],
+      "74": [
+        {
+          "item_id": 764,
+          "item_name": "MushroomWall",
+          "item_name_zh": "蘑菇墙",
+          "place_style": 0
+        }
+      ],
+      "75": [
+        {
+          "item_id": 768,
+          "item_name": "BoneBlockWall",
+          "item_name_zh": "骨块墙",
+          "place_style": 0
+        }
+      ],
+      "76": [
+        {
+          "item_id": 769,
+          "item_name": "SlimeBlockWall",
+          "item_name_zh": "史莱姆块墙",
+          "place_style": 0
+        }
+      ],
+      "77": [
+        {
+          "item_id": 770,
+          "item_name": "FleshBlockWall",
+          "item_name_zh": "血肉块墙",
+          "place_style": 0
+        }
+      ],
+      "82": [
+        {
+          "item_id": 825,
+          "item_name": "DiscWall",
+          "item_name_zh": "飞盘墙",
+          "place_style": 0
+        }
+      ],
+      "84": [
+        {
+          "item_id": 884,
+          "item_name": "IceBrickWall",
+          "item_name_zh": "冰雪砖墙",
+          "place_style": 0
+        }
+      ],
+      "85": [
+        {
+          "item_id": 927,
+          "item_name": "ShadewoodWall",
+          "item_name_zh": "暗影木墙",
+          "place_style": 0
+        }
+      ],
+      "112": [
+        {
+          "item_id": 1102,
+          "item_name": "LihzahrdBrickWall",
+          "item_name_zh": "丛林蜥蜴砖墙",
+          "place_style": 0
+        }
+      ],
+      "108": [
+        {
+          "item_id": 1126,
+          "item_name": "HiveWall",
+          "item_name_zh": "蜂巢墙",
+          "place_style": 0
+        }
+      ],
+      "88": [
+        {
+          "item_id": 1267,
+          "item_name": "PurpleStainedGlass",
+          "item_name_zh": "紫花窗玻璃",
+          "place_style": 0
+        }
+      ],
+      "89": [
+        {
+          "item_id": 1268,
+          "item_name": "YellowStainedGlass",
+          "item_name_zh": "黄花窗玻璃",
+          "place_style": 0
+        }
+      ],
+      "90": [
+        {
+          "item_id": 1269,
+          "item_name": "BlueStainedGlass",
+          "item_name_zh": "蓝花窗玻璃",
+          "place_style": 0
+        }
+      ],
+      "91": [
+        {
+          "item_id": 1270,
+          "item_name": "GreenStainedGlass",
+          "item_name_zh": "绿花窗玻璃",
+          "place_style": 0
+        }
+      ],
+      "92": [
+        {
+          "item_id": 1271,
+          "item_name": "RedStainedGlass",
+          "item_name_zh": "红花窗玻璃",
+          "place_style": 0
+        }
+      ],
+      "93": [
+        {
+          "item_id": 1272,
+          "item_name": "MulticoloredStainedGlass",
+          "item_name_zh": "五彩花窗玻璃",
+          "place_style": 0
+        }
+      ],
+      "100": [
+        {
+          "item_id": 1378,
+          "item_name": "BlueSlabWall",
+          "item_name_zh": "蓝板墙",
+          "place_style": 0
+        }
+      ],
+      "101": [
+        {
+          "item_id": 1379,
+          "item_name": "BlueTiledWall",
+          "item_name_zh": "蓝瓷砖墙",
+          "place_style": 0
+        }
+      ],
+      "102": [
+        {
+          "item_id": 1380,
+          "item_name": "PinkSlabWall",
+          "item_name_zh": "粉板墙",
+          "place_style": 0
+        }
+      ],
+      "103": [
+        {
+          "item_id": 1381,
+          "item_name": "PinkTiledWall",
+          "item_name_zh": "粉瓷砖墙",
+          "place_style": 0
+        }
+      ],
+      "104": [
+        {
+          "item_id": 1382,
+          "item_name": "GreenSlabWall",
+          "item_name_zh": "绿板墙",
+          "place_style": 0
+        }
+      ],
+      "105": [
+        {
+          "item_id": 1383,
+          "item_name": "GreenTiledWall",
+          "item_name_zh": "绿瓷砖墙",
+          "place_style": 0
+        }
+      ],
+      "106": [
+        {
+          "item_id": 1447,
+          "item_name": "WoodenFence",
+          "item_name_zh": "木栅栏",
+          "place_style": 0
+        }
+      ],
+      "107": [
+        {
+          "item_id": 1448,
+          "item_name": "LeadFence",
+          "item_name_zh": "铅栅栏",
+          "place_style": 0
+        }
+      ],
+      "109": [
+        {
+          "item_id": 1590,
+          "item_name": "PalladiumColumnWall",
+          "item_name_zh": "钯金柱墙",
+          "place_style": 0
+        }
+      ],
+      "110": [
+        {
+          "item_id": 1592,
+          "item_name": "BubblegumBlockWall",
+          "item_name_zh": "泡泡糖块墙",
+          "place_style": 0
+        }
+      ],
+      "111": [
+        {
+          "item_id": 1594,
+          "item_name": "TitanstoneBlockWall",
+          "item_name_zh": "钛石块墙",
+          "place_style": 0
+        }
+      ],
+      "78": [
+        {
+          "item_id": 1723,
+          "item_name": "LivingWoodWall",
+          "item_name_zh": "生命木墙",
+          "place_style": 0
+        }
+      ],
+      "113": [
+        {
+          "item_id": 1726,
+          "item_name": "PumpkinWall",
+          "item_name_zh": "南瓜墙",
+          "place_style": 0
+        }
+      ],
+      "114": [
+        {
+          "item_id": 1728,
+          "item_name": "HayWall",
+          "item_name_zh": "干草墙",
+          "place_style": 0
+        }
+      ],
+      "115": [
+        {
+          "item_id": 1730,
+          "item_name": "SpookyWoodWall",
+          "item_name_zh": "阴森木墙",
+          "place_style": 0
+        }
+      ],
+      "116": [
+        {
+          "item_id": 1948,
+          "item_name": "ChristmasTreeWallpaper",
+          "item_name_zh": "圣诞树壁纸",
+          "place_style": 0
+        }
+      ],
+      "117": [
+        {
+          "item_id": 1949,
+          "item_name": "OrnamentWallpaper",
+          "item_name_zh": "装饰壁纸",
+          "place_style": 0
+        }
+      ],
+      "118": [
+        {
+          "item_id": 1950,
+          "item_name": "CandyCaneWallpaper",
+          "item_name_zh": "糖棒壁纸",
+          "place_style": 0
+        }
+      ],
+      "119": [
+        {
+          "item_id": 1951,
+          "item_name": "FestiveWallpaper",
+          "item_name_zh": "节日壁纸",
+          "place_style": 0
+        }
+      ],
+      "120": [
+        {
+          "item_id": 1952,
+          "item_name": "StarsWallpaper",
+          "item_name_zh": "星星壁纸",
+          "place_style": 0
+        }
+      ],
+      "121": [
+        {
+          "item_id": 1953,
+          "item_name": "SquigglesWallpaper",
+          "item_name_zh": "波浪条纹壁纸",
+          "place_style": 0
+        }
+      ],
+      "122": [
+        {
+          "item_id": 1954,
+          "item_name": "SnowflakeWallpaper",
+          "item_name_zh": "雪花壁纸",
+          "place_style": 0
+        }
+      ],
+      "123": [
+        {
+          "item_id": 1955,
+          "item_name": "KrampusHornWallpaper",
+          "item_name_zh": "坎卜斯犄角壁纸",
+          "place_style": 0
+        }
+      ],
+      "124": [
+        {
+          "item_id": 1956,
+          "item_name": "BluegreenWallpaper",
+          "item_name_zh": "蓝绿壁纸",
+          "place_style": 0
+        }
+      ],
+      "125": [
+        {
+          "item_id": 1957,
+          "item_name": "GrinchFingerWallpaper",
+          "item_name_zh": "格林奇手指壁纸",
+          "place_style": 0
+        }
+      ],
+      "126": [
+        {
+          "item_id": 2008,
+          "item_name": "FancyGreyWallpaper",
+          "item_name_zh": "别致灰壁纸",
+          "place_style": 0
+        }
+      ],
+      "127": [
+        {
+          "item_id": 2009,
+          "item_name": "IceFloeWallpaper",
+          "item_name_zh": "浮冰壁纸",
+          "place_style": 0
+        }
+      ],
+      "128": [
+        {
+          "item_id": 2010,
+          "item_name": "MusicWallpaper",
+          "item_name_zh": "音符壁纸",
+          "place_style": 0
+        }
+      ],
+      "129": [
+        {
+          "item_id": 2011,
+          "item_name": "PurpleRainWallpaper",
+          "item_name_zh": "紫雨壁纸",
+          "place_style": 0
+        }
+      ],
+      "130": [
+        {
+          "item_id": 2012,
+          "item_name": "RainbowWallpaper",
+          "item_name_zh": "彩虹壁纸",
+          "place_style": 0
+        }
+      ],
+      "131": [
+        {
+          "item_id": 2013,
+          "item_name": "SparkleStoneWallpaper",
+          "item_name_zh": "烁石壁纸",
+          "place_style": 0
+        }
+      ],
+      "132": [
+        {
+          "item_id": 2014,
+          "item_name": "StarlitHeavenWallpaper",
+          "item_name_zh": "星光天堂壁纸",
+          "place_style": 0
+        }
+      ],
+      "133": [
+        {
+          "item_id": 2158,
+          "item_name": "BubbleWallpaper",
+          "item_name_zh": "泡泡壁纸",
+          "place_style": 0
+        }
+      ],
+      "134": [
+        {
+          "item_id": 2159,
+          "item_name": "CopperPipeWallpaper",
+          "item_name_zh": "铜管壁纸",
+          "place_style": 0
+        }
+      ],
+      "135": [
+        {
+          "item_id": 2160,
+          "item_name": "DuckyWallpaper",
+          "item_name_zh": "黄鸭壁纸",
+          "place_style": 0
+        }
+      ],
+      "136": [
+        {
+          "item_id": 2169,
+          "item_name": "WaterfallWall",
+          "item_name_zh": "瀑布墙",
+          "place_style": 0
+        }
+      ],
+      "137": [
+        {
+          "item_id": 2170,
+          "item_name": "LavafallWall",
+          "item_name_zh": "熔岩瀑布墙",
+          "place_style": 0
+        }
+      ],
+      "138": [
+        {
+          "item_id": 2210,
+          "item_name": "EbonwoodFence",
+          "item_name_zh": "乌木栅栏",
+          "place_style": 0
+        }
+      ],
+      "139": [
+        {
+          "item_id": 2211,
+          "item_name": "RichMahoganyFence",
+          "item_name_zh": "红木栅栏",
+          "place_style": 0
+        }
+      ],
+      "140": [
+        {
+          "item_id": 2212,
+          "item_name": "PearlwoodFence",
+          "item_name_zh": "珍珠木栅栏",
+          "place_style": 0
+        }
+      ],
+      "141": [
+        {
+          "item_id": 2213,
+          "item_name": "ShadewoodFence",
+          "item_name_zh": "暗影木栅栏",
+          "place_style": 0
+        }
+      ],
+      "142": [
+        {
+          "item_id": 2263,
+          "item_name": "WhiteDynastyWall",
+          "item_name_zh": "白王朝墙",
+          "place_style": 0
+        }
+      ],
+      "143": [
+        {
+          "item_id": 2264,
+          "item_name": "BlueDynastyWall",
+          "item_name_zh": "蓝王朝墙",
+          "place_style": 0
+        }
+      ],
+      "144": [
+        {
+          "item_id": 2271,
+          "item_name": "ArcaneRuneWall",
+          "item_name_zh": "奥术神符墙",
+          "place_style": 0
+        }
+      ],
+      "145": [
+        {
+          "item_id": 2333,
+          "item_name": "IronFence",
+          "item_name_zh": "铁栅栏",
+          "place_style": 0
+        }
+      ],
+      "146": [
+        {
+          "item_id": 2432,
+          "item_name": "CopperPlatingWall",
+          "item_name_zh": "铜护板墙",
+          "place_style": 0
+        }
+      ],
+      "147": [
+        {
+          "item_id": 2433,
+          "item_name": "StoneSlabWall",
+          "item_name_zh": "石板墙",
+          "place_style": 0
+        }
+      ],
+      "148": [
+        {
+          "item_id": 2434,
+          "item_name": "Sail",
+          "item_name_zh": "船帆",
+          "place_style": 0
+        }
+      ],
+      "149": [
+        {
+          "item_id": 2505,
+          "item_name": "BorealWoodWall",
+          "item_name_zh": "针叶木墙",
+          "place_style": 0
+        }
+      ],
+      "151": [
+        {
+          "item_id": 2506,
+          "item_name": "PalmWoodWall",
+          "item_name_zh": "棕榈木墙",
+          "place_style": 0
+        }
+      ],
+      "150": [
+        {
+          "item_id": 2507,
+          "item_name": "BorealWoodFence",
+          "item_name_zh": "针叶木栅栏",
+          "place_style": 0
+        }
+      ],
+      "152": [
+        {
+          "item_id": 2508,
+          "item_name": "PalmWoodFence",
+          "item_name_zh": "棕榈木栅栏",
+          "place_style": 0
+        }
+      ],
+      "153": [
+        {
+          "item_id": 2677,
+          "item_name": "AmberGemsparkWall",
+          "item_name_zh": "琥珀晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "157": [
+        {
+          "item_id": 2678,
+          "item_name": "AmberGemsparkWallOff",
+          "item_name_zh": "黯淡琥珀晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "154": [
+        {
+          "item_id": 2679,
+          "item_name": "AmethystGemsparkWall",
+          "item_name_zh": "紫晶晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "158": [
+        {
+          "item_id": 2680,
+          "item_name": "AmethystGemsparkWallOff",
+          "item_name_zh": "黯淡紫晶晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "155": [
+        {
+          "item_id": 2681,
+          "item_name": "DiamondGemsparkWall",
+          "item_name_zh": "钻石晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "159": [
+        {
+          "item_id": 2682,
+          "item_name": "DiamondGemsparkWallOff",
+          "item_name_zh": "黯淡钻石晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "156": [
+        {
+          "item_id": 2683,
+          "item_name": "EmeraldGemsparkWall",
+          "item_name_zh": "翡翠晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "160": [
+        {
+          "item_id": 2684,
+          "item_name": "EmeraldGemsparkWallOff",
+          "item_name_zh": "黯淡翡翠晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "164": [
+        {
+          "item_id": 2685,
+          "item_name": "RubyGemsparkWall",
+          "item_name_zh": "红玉晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "161": [
+        {
+          "item_id": 2686,
+          "item_name": "RubyGemsparkWallOff",
+          "item_name_zh": "黯淡红玉晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "165": [
+        {
+          "item_id": 2687,
+          "item_name": "SapphireGemsparkWall",
+          "item_name_zh": "蓝玉晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "162": [
+        {
+          "item_id": 2688,
+          "item_name": "SapphireGemsparkWallOff",
+          "item_name_zh": "黯淡蓝玉晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "166": [
+        {
+          "item_id": 2689,
+          "item_name": "TopazGemsparkWall",
+          "item_name_zh": "黄玉晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "163": [
+        {
+          "item_id": 2690,
+          "item_name": "TopazGemsparkWallOff",
+          "item_name_zh": "黯淡黄玉晶莹宝石墙",
+          "place_style": 0
+        }
+      ],
+      "167": [
+        {
+          "item_id": 2691,
+          "item_name": "TinPlatingWall",
+          "item_name_zh": "锡护板墙",
+          "place_style": 0
+        }
+      ],
+      "168": [
+        {
+          "item_id": 2696,
+          "item_name": "ConfettiWall",
+          "item_name_zh": "彩纸墙",
+          "place_style": 0
+        }
+      ],
+      "169": [
+        {
+          "item_id": 2698,
+          "item_name": "ConfettiWallBlack",
+          "item_name_zh": "午夜彩纸墙",
+          "place_style": 0
+        }
+      ],
+      "172": [
+        {
+          "item_id": 2788,
+          "item_name": "HoneyfallWall",
+          "item_name_zh": "蜂蜜瀑布墙",
+          "place_style": 0
+        }
+      ],
+      "173": [
+        {
+          "item_id": 2789,
+          "item_name": "ChlorophyteBrickWall",
+          "item_name_zh": "叶绿砖墙",
+          "place_style": 0
+        }
+      ],
+      "174": [
+        {
+          "item_id": 2790,
+          "item_name": "CrimtaneBrickWall",
+          "item_name_zh": "猩红矿砖墙",
+          "place_style": 0
+        }
+      ],
+      "175": [
+        {
+          "item_id": 2791,
+          "item_name": "ShroomitePlatingWall",
+          "item_name_zh": "蘑菇矿护板墙",
+          "place_style": 0
+        }
+      ],
+      "176": [
+        {
+          "item_id": 2861,
+          "item_name": "MartianConduitWall",
+          "item_name_zh": "火星管道墙",
+          "place_style": 0
+        }
+      ],
+      "177": [
+        {
+          "item_id": 3067,
+          "item_name": "HellstoneBrickWall",
+          "item_name_zh": "狱石砖墙",
+          "place_style": 0
+        }
+      ],
+      "183": [
+        {
+          "item_id": 3082,
+          "item_name": "MarbleWall",
+          "item_name_zh": "大理石墙",
+          "place_style": 0
+        }
+      ],
+      "179": [
+        {
+          "item_id": 3083,
+          "item_name": "MarbleBlockWall",
+          "item_name_zh": "光面大理石墙",
+          "place_style": 0
+        }
+      ],
+      "184": [
+        {
+          "item_id": 3088,
+          "item_name": "GraniteWall",
+          "item_name_zh": "花岗岩墙",
+          "place_style": 0
+        }
+      ],
+      "181": [
+        {
+          "item_id": 3089,
+          "item_name": "GraniteBlockWall",
+          "item_name_zh": "光面花岗岩墙",
+          "place_style": 0
+        }
+      ],
+      "182": [
+        {
+          "item_id": 3101,
+          "item_name": "MeteoriteBrickWall",
+          "item_name_zh": "陨石砖墙",
+          "place_style": 0
+        }
+      ],
+      "186": [
+        {
+          "item_id": 3238,
+          "item_name": "CrystalBlockWall",
+          "item_name_zh": "水晶块墙",
+          "place_style": 0
+        }
+      ],
+      "275": [
+        {
+          "item_id": 3273,
+          "item_name": "SandstoneWall",
+          "item_name_zh": "沙岩墙",
+          "place_style": 0
+        }
+      ],
+      "304": [
+        {
+          "item_id": 3340,
+          "item_name": "HardenedSandWall",
+          "item_name_zh": "硬化沙墙",
+          "place_style": 0
+        }
+      ],
+      "305": [
+        {
+          "item_id": 3341,
+          "item_name": "CorruptHardenedSandWall",
+          "item_name_zh": "硬化黑檀沙墙",
+          "place_style": 0
+        }
+      ],
+      "306": [
+        {
+          "item_id": 3342,
+          "item_name": "CrimsonHardenedSandWall",
+          "item_name_zh": "硬化猩红沙墙",
+          "place_style": 0
+        }
+      ],
+      "307": [
+        {
+          "item_id": 3343,
+          "item_name": "HallowHardenedSandWall",
+          "item_name_zh": "硬化珍珠沙墙",
+          "place_style": 0
+        }
+      ],
+      "308": [
+        {
+          "item_id": 3344,
+          "item_name": "CorruptSandstoneWall",
+          "item_name_zh": "黑檀沙岩墙",
+          "place_style": 0
+        }
+      ],
+      "309": [
+        {
+          "item_id": 3345,
+          "item_name": "CrimsonSandstoneWall",
+          "item_name_zh": "猩红沙岩墙",
+          "place_style": 0
+        }
+      ],
+      "310": [
+        {
+          "item_id": 3346,
+          "item_name": "HallowSandstoneWall",
+          "item_name_zh": "珍珠沙岩墙",
+          "place_style": 0
+        }
+      ],
+      "311": [
+        {
+          "item_id": 3348,
+          "item_name": "DesertFossilWall",
+          "item_name_zh": "沙漠化石墙",
+          "place_style": 0
+        }
+      ],
+      "224": [
+        {
+          "item_id": 3472,
+          "item_name": "LunarBrickWall",
+          "item_name_zh": "夜明砖墙",
+          "place_style": 0
+        }
+      ],
+      "60": [
+        {
+          "item_id": 3584,
+          "item_name": "LivingLeafWall",
+          "item_name_zh": "生命树叶墙",
+          "place_style": 0
+        }
+      ],
+      "225": [
+        {
+          "item_id": 3751,
+          "item_name": "CogWall",
+          "item_name_zh": "齿轮墙",
+          "place_style": 0
+        }
+      ],
+      "226": [
+        {
+          "item_id": 3752,
+          "item_name": "SandFallWall",
+          "item_name_zh": "落沙墙",
+          "place_style": 0
+        }
+      ],
+      "227": [
+        {
+          "item_id": 3753,
+          "item_name": "SnowFallWall",
+          "item_name_zh": "降雪墙",
+          "place_style": 0
+        }
+      ],
+      "228": [
+        {
+          "item_id": 3760,
+          "item_name": "SillyBalloonPinkWall",
+          "item_name_zh": "呆萌粉气球墙",
+          "place_style": 0
+        }
+      ],
+      "229": [
+        {
+          "item_id": 3761,
+          "item_name": "SillyBalloonPurpleWall",
+          "item_name_zh": "呆萌紫气球墙",
+          "place_style": 0
+        }
+      ],
+      "230": [
+        {
+          "item_id": 3762,
+          "item_name": "SillyBalloonGreenWall",
+          "item_name_zh": "呆萌绿气球墙",
+          "place_style": 0
+        }
+      ],
+      "231": [
+        {
+          "item_id": 3952,
+          "item_name": "IronBrickWall",
+          "item_name_zh": "铁砖墙",
+          "place_style": 0
+        }
+      ],
+      "232": [
+        {
+          "item_id": 3954,
+          "item_name": "LeadBrickWall",
+          "item_name_zh": "铅砖墙",
+          "place_style": 0
+        }
+      ],
+      "233": [
+        {
+          "item_id": 3956,
+          "item_name": "LesionBlockWall",
+          "item_name_zh": "病变块墙",
+          "place_style": 0
+        }
+      ],
+      "234": [
+        {
+          "item_id": 4052,
+          "item_name": "CrimstoneBrickWall",
+          "item_name_zh": "猩红石砖墙",
+          "place_style": 0
+        }
+      ],
+      "235": [
+        {
+          "item_id": 4053,
+          "item_name": "SmoothSandstoneWall",
+          "item_name_zh": "光面沙岩墙",
+          "place_style": 0
+        }
+      ],
+      "236": [
+        {
+          "item_id": 4140,
+          "item_name": "SpiderWall",
+          "item_name_zh": "蜘蛛窝墙",
+          "place_style": 0
+        }
+      ],
+      "237": [
+        {
+          "item_id": 4233,
+          "item_name": "SolarBrickWall",
+          "item_name_zh": "日耀砖墙",
+          "place_style": 0
+        }
+      ],
+      "238": [
+        {
+          "item_id": 4234,
+          "item_name": "VortexBrickWall",
+          "item_name_zh": "星旋砖墙",
+          "place_style": 0
+        }
+      ],
+      "239": [
+        {
+          "item_id": 4235,
+          "item_name": "NebulaBrickWall",
+          "item_name_zh": "星云砖墙",
+          "place_style": 0
+        }
+      ],
+      "240": [
+        {
+          "item_id": 4236,
+          "item_name": "StardustBrickWall",
+          "item_name_zh": "星尘砖墙",
+          "place_style": 0
+        }
+      ],
+      "241": [
+        {
+          "item_id": 4260,
+          "item_name": "OrangeStainedGlass",
+          "item_name_zh": "橙花窗玻璃",
+          "place_style": 0
+        }
+      ],
+      "242": [
+        {
+          "item_id": 4279,
+          "item_name": "GoldStarryGlassWall",
+          "item_name_zh": "金星墙",
+          "place_style": 0
+        }
+      ],
+      "243": [
+        {
+          "item_id": 4280,
+          "item_name": "BlueStarryGlassWall",
+          "item_name_zh": "蓝星墙",
+          "place_style": 0
+        }
+      ],
+      "245": [
+        {
+          "item_id": 4424,
+          "item_name": "WroughtIronFence",
+          "item_name_zh": "铁艺栅栏",
+          "place_style": 0
+        }
+      ],
+      "246": [
+        {
+          "item_id": 4486,
+          "item_name": "EbonstoneEcho",
+          "item_name_zh": "黑檀石墙",
+          "place_style": 0
+        }
+      ],
+      "247": [
+        {
+          "item_id": 4487,
+          "item_name": "MudWallEcho",
+          "item_name_zh": "泥墙",
+          "place_style": 0
+        }
+      ],
+      "248": [
+        {
+          "item_id": 4488,
+          "item_name": "PearlstoneEcho",
+          "item_name_zh": "珍珠石墙",
+          "place_style": 0
+        }
+      ],
+      "249": [
+        {
+          "item_id": 4489,
+          "item_name": "SnowWallEcho",
+          "item_name_zh": "雪墙",
+          "place_style": 0
+        }
+      ],
+      "250": [
+        {
+          "item_id": 4490,
+          "item_name": "AmethystEcho",
+          "item_name_zh": "紫晶石墙",
+          "place_style": 0
+        }
+      ],
+      "251": [
+        {
+          "item_id": 4491,
+          "item_name": "TopazEcho",
+          "item_name_zh": "黄玉石墙",
+          "place_style": 0
+        }
+      ],
+      "252": [
+        {
+          "item_id": 4492,
+          "item_name": "SapphireEcho",
+          "item_name_zh": "蓝玉石墙",
+          "place_style": 0
+        }
+      ],
+      "253": [
+        {
+          "item_id": 4493,
+          "item_name": "EmeraldEcho",
+          "item_name_zh": "翡翠石墙",
+          "place_style": 0
+        }
+      ],
+      "254": [
+        {
+          "item_id": 4494,
+          "item_name": "RubyEcho",
+          "item_name_zh": "红玉石墙",
+          "place_style": 0
+        }
+      ],
+      "255": [
+        {
+          "item_id": 4495,
+          "item_name": "DiamondEcho",
+          "item_name_zh": "钻石石墙",
+          "place_style": 0
+        }
+      ],
+      "256": [
+        {
+          "item_id": 4496,
+          "item_name": "Cave1Echo",
+          "item_name_zh": "绿苔藓墙",
+          "place_style": 0
+        }
+      ],
+      "257": [
+        {
+          "item_id": 4497,
+          "item_name": "Cave2Echo",
+          "item_name_zh": "棕苔藓墙",
+          "place_style": 0
+        }
+      ],
+      "258": [
+        {
+          "item_id": 4498,
+          "item_name": "Cave3Echo",
+          "item_name_zh": "红苔藓墙",
+          "place_style": 0
+        }
+      ],
+      "259": [
+        {
+          "item_id": 4499,
+          "item_name": "Cave4Echo",
+          "item_name_zh": "蓝苔藓墙",
+          "place_style": 0
+        }
+      ],
+      "260": [
+        {
+          "item_id": 4500,
+          "item_name": "Cave5Echo",
+          "item_name_zh": "紫苔藓墙",
+          "place_style": 0
+        }
+      ],
+      "261": [
+        {
+          "item_id": 4501,
+          "item_name": "Cave6Echo",
+          "item_name_zh": "岩石土墙",
+          "place_style": 0
+        }
+      ],
+      "262": [
+        {
+          "item_id": 4502,
+          "item_name": "Cave7Echo",
+          "item_name_zh": "古老石墙",
+          "place_style": 0
+        }
+      ],
+      "263": [
+        {
+          "item_id": 4503,
+          "item_name": "SpiderEcho",
+          "item_name_zh": "蜘蛛墙",
+          "place_style": 0
+        }
+      ],
+      "264": [
+        {
+          "item_id": 4504,
+          "item_name": "CorruptGrassEcho",
+          "item_name_zh": "腐化草墙",
+          "place_style": 0
+        }
+      ],
+      "265": [
+        {
+          "item_id": 4505,
+          "item_name": "HallowedGrassEcho",
+          "item_name_zh": "神圣草墙",
+          "place_style": 0
+        }
+      ],
+      "266": [
+        {
+          "item_id": 4506,
+          "item_name": "IceEcho",
+          "item_name_zh": "冰雪墙",
+          "place_style": 0
+        }
+      ],
+      "267": [
+        {
+          "item_id": 4507,
+          "item_name": "ObsidianBackEcho",
+          "item_name_zh": "黑曜石墙",
+          "place_style": 0
+        }
+      ],
+      "268": [
+        {
+          "item_id": 4508,
+          "item_name": "CrimsonGrassEcho",
+          "item_name_zh": "猩红草墙",
+          "place_style": 0
+        }
+      ],
+      "269": [
+        {
+          "item_id": 4509,
+          "item_name": "CrimstoneEcho",
+          "item_name_zh": "猩红石墙",
+          "place_style": 0
+        }
+      ],
+      "270": [
+        {
+          "item_id": 4510,
+          "item_name": "CaveWall1Echo",
+          "item_name_zh": "洞穴土墙",
+          "place_style": 0
+        }
+      ],
+      "271": [
+        {
+          "item_id": 4511,
+          "item_name": "CaveWall2Echo",
+          "item_name_zh": "粗糙土墙",
+          "place_style": 0
+        }
+      ],
+      "274": [
+        {
+          "item_id": 4512,
+          "item_name": "Cave8Echo",
+          "item_name_zh": "崎岖石墙",
+          "place_style": 0
+        }
+      ],
+      "276": [
+        {
+          "item_id": 4513,
+          "item_name": "Corruption1Echo",
+          "item_name_zh": "腐化赘生墙",
+          "place_style": 0
+        }
+      ],
+      "277": [
+        {
+          "item_id": 4514,
+          "item_name": "Corruption2Echo",
+          "item_name_zh": "腐化团块墙",
+          "place_style": 0
+        }
+      ],
+      "278": [
+        {
+          "item_id": 4515,
+          "item_name": "Corruption3Echo",
+          "item_name_zh": "腐化脓疱墙",
+          "place_style": 0
+        }
+      ],
+      "279": [
+        {
+          "item_id": 4516,
+          "item_name": "Corruption4Echo",
+          "item_name_zh": "腐化卷须墙",
+          "place_style": 0
+        }
+      ],
+      "280": [
+        {
+          "item_id": 4517,
+          "item_name": "Crimson1Echo",
+          "item_name_zh": "猩红硬皮墙",
+          "place_style": 0
+        }
+      ],
+      "281": [
+        {
+          "item_id": 4518,
+          "item_name": "Crimson2Echo",
+          "item_name_zh": "猩红疮痂墙",
+          "place_style": 0
+        }
+      ],
+      "282": [
+        {
+          "item_id": 4519,
+          "item_name": "Crimson3Echo",
+          "item_name_zh": "猩红尖牙墙",
+          "place_style": 0
+        }
+      ],
+      "283": [
+        {
+          "item_id": 4520,
+          "item_name": "Crimson4Echo",
+          "item_name_zh": "猩红水疱墙",
+          "place_style": 0
+        }
+      ],
+      "284": [
+        {
+          "item_id": 4521,
+          "item_name": "Dirt1Echo",
+          "item_name_zh": "分层土墙",
+          "place_style": 0
+        }
+      ],
+      "285": [
+        {
+          "item_id": 4522,
+          "item_name": "Dirt2Echo",
+          "item_name_zh": "剥落土墙",
+          "place_style": 0
+        }
+      ],
+      "286": [
+        {
+          "item_id": 4523,
+          "item_name": "Dirt3Echo",
+          "item_name_zh": "破裂土墙",
+          "place_style": 0
+        }
+      ],
+      "287": [
+        {
+          "item_id": 4524,
+          "item_name": "Dirt4Echo",
+          "item_name_zh": "皱曲土墙",
+          "place_style": 0
+        }
+      ],
+      "288": [
+        {
+          "item_id": 4525,
+          "item_name": "Hallow1Echo",
+          "item_name_zh": "神圣棱柱墙",
+          "place_style": 0
+        }
+      ],
+      "289": [
+        {
+          "item_id": 4526,
+          "item_name": "Hallow2Echo",
+          "item_name_zh": "神圣洞穴墙",
+          "place_style": 0
+        }
+      ],
+      "290": [
+        {
+          "item_id": 4527,
+          "item_name": "Hallow3Echo",
+          "item_name_zh": "神圣碎块墙",
+          "place_style": 0
+        }
+      ],
+      "291": [
+        {
+          "item_id": 4528,
+          "item_name": "Hallow4Echo",
+          "item_name_zh": "神圣结晶墙",
+          "place_style": 0
+        }
+      ],
+      "292": [
+        {
+          "item_id": 4529,
+          "item_name": "Jungle1Echo",
+          "item_name_zh": "地衣石墙",
+          "place_style": 0
+        }
+      ],
+      "293": [
+        {
+          "item_id": 4530,
+          "item_name": "Jungle2Echo",
+          "item_name_zh": "多叶丛林墙",
+          "place_style": 0
+        }
+      ],
+      "294": [
+        {
+          "item_id": 4531,
+          "item_name": "Jungle3Echo",
+          "item_name_zh": "常春藤石墙",
+          "place_style": 0
+        }
+      ],
+      "295": [
+        {
+          "item_id": 4532,
+          "item_name": "Jungle4Echo",
+          "item_name_zh": "丛林藤蔓墙",
+          "place_style": 0
+        }
+      ],
+      "296": [
+        {
+          "item_id": 4533,
+          "item_name": "Lava1Echo",
+          "item_name_zh": "余烬墙",
+          "place_style": 0
+        }
+      ],
+      "297": [
+        {
+          "item_id": 4534,
+          "item_name": "Lava2Echo",
+          "item_name_zh": "灰渣墙",
+          "place_style": 0
+        }
+      ],
+      "298": [
+        {
+          "item_id": 4535,
+          "item_name": "Lava3Echo",
+          "item_name_zh": "岩浆墙",
+          "place_style": 0
+        }
+      ],
+      "299": [
+        {
+          "item_id": 4536,
+          "item_name": "Lava4Echo",
+          "item_name_zh": "阴燃石墙",
+          "place_style": 0
+        }
+      ],
+      "300": [
+        {
+          "item_id": 4537,
+          "item_name": "Rocks1Echo",
+          "item_name_zh": "破旧石墙",
+          "place_style": 0
+        }
+      ],
+      "301": [
+        {
+          "item_id": 4538,
+          "item_name": "Rocks2Echo",
+          "item_name_zh": "钟乳石墙",
+          "place_style": 0
+        }
+      ],
+      "302": [
+        {
+          "item_id": 4539,
+          "item_name": "Rocks3Echo",
+          "item_name_zh": "斑驳石墙",
+          "place_style": 0
+        }
+      ],
+      "303": [
+        {
+          "item_id": 4540,
+          "item_name": "Rocks4Echo",
+          "item_name_zh": "断裂石墙",
+          "place_style": 0
+        }
+      ],
+      "313": [
+        {
+          "item_id": 4548,
+          "item_name": "LargeBambooBlockWall",
+          "item_name_zh": "大竹墙",
+          "place_style": 0
+        }
+      ],
+      "312": [
+        {
+          "item_id": 4565,
+          "item_name": "BambooBlockWall",
+          "item_name_zh": "竹墙",
+          "place_style": 0
+        }
+      ],
+      "314": [
+        {
+          "item_id": 4647,
+          "item_name": "AmberStoneWallEcho",
+          "item_name_zh": "琥珀石墙",
+          "place_style": 0
+        }
+      ],
+      "315": [
+        {
+          "item_id": 4667,
+          "item_name": "BambooFence",
+          "item_name_zh": "竹栅栏",
+          "place_style": 0
+        }
+      ],
+      "316": [
+        {
+          "item_id": 5216,
+          "item_name": "AshWoodWall",
+          "item_name_zh": "灰烬木墙",
+          "place_style": 0
+        }
+      ],
+      "317": [
+        {
+          "item_id": 5217,
+          "item_name": "AshWoodFence",
+          "item_name_zh": "灰烬木栅栏",
+          "place_style": 0
+        }
+      ],
+      "318": [
+        {
+          "item_id": 5291,
+          "item_name": "EchoWall",
+          "item_name_zh": "回声墙",
+          "place_style": 0
+        }
+      ],
+      "319": [
+        {
+          "item_id": 5307,
+          "item_name": "ReefWall",
+          "item_name_zh": "珊瑚礁墙",
+          "place_style": 0
+        }
+      ],
+      "62": [
+        {
+          "item_id": 5363,
+          "item_name": "SpiderWallUnsafe",
+          "item_name_zh": "蜘蛛栖息墙",
+          "place_style": 0
+        }
+      ],
+      "7": [
+        {
+          "item_id": 5365,
+          "item_name": "BlueBrickWallUnsafe",
+          "item_name_zh": "诅咒蓝砖墙",
+          "place_style": 0
+        }
+      ],
+      "94": [
+        {
+          "item_id": 5366,
+          "item_name": "BlueSlabWallUnsafe",
+          "item_name_zh": "诅咒蓝板墙",
+          "place_style": 0
+        }
+      ],
+      "95": [
+        {
+          "item_id": 5367,
+          "item_name": "BlueTiledWallUnsafe",
+          "item_name_zh": "诅咒蓝瓷砖墙",
+          "place_style": 0
+        }
+      ],
+      "9": [
+        {
+          "item_id": 5368,
+          "item_name": "PinkBrickWallUnsafe",
+          "item_name_zh": "诅咒粉砖墙",
+          "place_style": 0
+        }
+      ],
+      "96": [
+        {
+          "item_id": 5369,
+          "item_name": "PinkSlabWallUnsafe",
+          "item_name_zh": "诅咒粉板墙",
+          "place_style": 0
+        }
+      ],
+      "97": [
+        {
+          "item_id": 5370,
+          "item_name": "PinkTiledWallUnsafe",
+          "item_name_zh": "诅咒粉瓷砖墙",
+          "place_style": 0
+        }
+      ],
+      "8": [
+        {
+          "item_id": 5371,
+          "item_name": "GreenBrickWallUnsafe",
+          "item_name_zh": "诅咒绿砖墙",
+          "place_style": 0
+        }
+      ],
+      "98": [
+        {
+          "item_id": 5372,
+          "item_name": "GreenSlabWallUnsafe",
+          "item_name_zh": "诅咒绿板墙",
+          "place_style": 0
+        }
+      ],
+      "99": [
+        {
+          "item_id": 5373,
+          "item_name": "GreenTiledWallUnsafe",
+          "item_name_zh": "诅咒绿瓷砖墙",
+          "place_style": 0
+        }
+      ],
+      "187": [
+        {
+          "item_id": 5374,
+          "item_name": "SandstoneWallUnsafe",
+          "item_name_zh": "危险沙岩墙",
+          "place_style": 0
+        }
+      ],
+      "216": [
+        {
+          "item_id": 5375,
+          "item_name": "HardenedSandWallUnsafe",
+          "item_name_zh": "危险硬化沙墙",
+          "place_style": 0
+        }
+      ],
+      "87": [
+        {
+          "item_id": 5376,
+          "item_name": "LihzahrdWallUnsafe",
+          "item_name_zh": "禁戒丛林蜥蜴砖墙",
+          "place_style": 0
+        }
+      ],
+      "320": [
+        {
+          "item_id": 5396,
+          "item_name": "PoopWall",
+          "item_name_zh": "臭臭墙",
+          "place_style": 0
+        }
+      ],
+      "321": [
+        {
+          "item_id": 5397,
+          "item_name": "ShimmerWall",
+          "item_name_zh": "以太墙",
+          "place_style": 0
+        }
+      ],
+      "322": [
+        {
+          "item_id": 5399,
+          "item_name": "ShimmerBrickWall",
+          "item_name_zh": "以太砖墙",
+          "place_style": 0
+        }
+      ],
+      "323": [
+        {
+          "item_id": 5409,
+          "item_name": "LunarRustBrickWall",
+          "item_name_zh": "月锈砖墙",
+          "place_style": 0
+        }
+      ],
+      "324": [
+        {
+          "item_id": 5410,
+          "item_name": "DarkCelestialBrickWall",
+          "item_name_zh": "暗黑天界砖墙",
+          "place_style": 0
+        }
+      ],
+      "325": [
+        {
+          "item_id": 5411,
+          "item_name": "AstraBrickWall",
+          "item_name_zh": "星芒砖墙",
+          "place_style": 0
+        }
+      ],
+      "326": [
+        {
+          "item_id": 5412,
+          "item_name": "CosmicEmberBrickWall",
+          "item_name_zh": "宇宙余烬砖墙",
+          "place_style": 0
+        }
+      ],
+      "327": [
+        {
+          "item_id": 5413,
+          "item_name": "CryocoreBrickWall",
+          "item_name_zh": "冷核砖墙",
+          "place_style": 0
+        }
+      ],
+      "328": [
+        {
+          "item_id": 5414,
+          "item_name": "MercuryBrickWall",
+          "item_name_zh": "水星砖墙",
+          "place_style": 0
+        }
+      ],
+      "329": [
+        {
+          "item_id": 5415,
+          "item_name": "StarRoyaleBrickWall",
+          "item_name_zh": "星星皇家砖墙",
+          "place_style": 0
+        }
+      ],
+      "330": [
+        {
+          "item_id": 5416,
+          "item_name": "HeavenforgeBrickWall",
+          "item_name_zh": "天熔砖墙",
+          "place_style": 0
+        }
+      ],
+      "331": [
+        {
+          "item_id": 5418,
+          "item_name": "AncientBlueDungeonBrickWall",
+          "item_name_zh": "远古蓝砖墙",
+          "place_style": 0
+        }
+      ],
+      "332": [
+        {
+          "item_id": 5420,
+          "item_name": "AncientGreenDungeonBrickWall",
+          "item_name_zh": "远古绿砖墙",
+          "place_style": 0
+        }
+      ],
+      "333": [
+        {
+          "item_id": 5422,
+          "item_name": "AncientPinkDungeonBrickWall",
+          "item_name_zh": "远古粉砖墙",
+          "place_style": 0
+        }
+      ],
+      "334": [
+        {
+          "item_id": 5424,
+          "item_name": "AncientGoldBrickWall",
+          "item_name_zh": "远古金砖墙",
+          "place_style": 0
+        }
+      ],
+      "335": [
+        {
+          "item_id": 5426,
+          "item_name": "AncientSilverBrickWall",
+          "item_name_zh": "远古银砖墙",
+          "place_style": 0
+        }
+      ],
+      "336": [
+        {
+          "item_id": 5428,
+          "item_name": "AncientCopperBrickWall",
+          "item_name_zh": "远古铜砖墙",
+          "place_style": 0
+        }
+      ],
+      "339": [
+        {
+          "item_id": 5430,
+          "item_name": "AncientCobaltBrickWall",
+          "item_name_zh": "远古钴砖墙",
+          "place_style": 0
+        }
+      ],
+      "340": [
+        {
+          "item_id": 5432,
+          "item_name": "AncientMythrilBrickWall",
+          "item_name_zh": "远古秘银砖墙",
+          "place_style": 0
+        }
+      ],
+      "337": [
+        {
+          "item_id": 5434,
+          "item_name": "AncientObsidianBrickWall",
+          "item_name_zh": "远古黑曜石砖墙",
+          "place_style": 0
+        }
+      ],
+      "338": [
+        {
+          "item_id": 5436,
+          "item_name": "AncientHellstoneBrickWall",
+          "item_name_zh": "远古狱石砖墙",
+          "place_style": 0
+        }
+      ],
+      "341": [
+        {
+          "item_id": 5445,
+          "item_name": "LavaMossBlockWall",
+          "item_name_zh": "熔岩苔藓砖墙",
+          "place_style": 0
+        }
+      ],
+      "342": [
+        {
+          "item_id": 5446,
+          "item_name": "ArgonMossBlockWall",
+          "item_name_zh": "氩苔藓砖墙",
+          "place_style": 0
+        }
+      ],
+      "343": [
+        {
+          "item_id": 5447,
+          "item_name": "KryptonMossBlockWall",
+          "item_name_zh": "氪苔藓砖墙",
+          "place_style": 0
+        }
+      ],
+      "344": [
+        {
+          "item_id": 5448,
+          "item_name": "XenonMossBlockWall",
+          "item_name_zh": "氙苔藓砖墙",
+          "place_style": 0
+        }
+      ],
+      "345": [
+        {
+          "item_id": 5449,
+          "item_name": "VioletMossBlockWall",
+          "item_name_zh": "氖苔藓砖墙",
+          "place_style": 0
+        }
+      ],
+      "346": [
+        {
+          "item_id": 5450,
+          "item_name": "RainbowMossBlockWall",
+          "item_name_zh": "氦苔藓砖墙",
+          "place_style": 0
+        }
+      ],
+      "347": [
+        {
+          "item_id": 5494,
+          "item_name": "ShimmerFallWall",
+          "item_name_zh": "微光瀑布墙",
+          "place_style": 0
+        }
+      ],
+      "244": [
+        {
+          "item_id": 5545,
+          "item_name": "LivingWoodWallUnsafe",
+          "item_name_zh": "杂草丛生的生命木墙",
+          "place_style": 0
+        }
+      ],
+      "2": [
+        {
+          "item_id": 5546,
+          "item_name": "DirtWallUnsafe",
+          "item_name_zh": "天然土墙",
+          "place_style": 0
+        }
+      ],
+      "348": [
+        {
+          "item_id": 5623,
+          "item_name": "FallenStarWall",
+          "item_name_zh": "坠落之星墙",
+          "place_style": 0
+        }
+      ],
+      "351": [
+        {
+          "item_id": 5711,
+          "item_name": "FeywoodWall",
+          "item_name_zh": "仙林墙",
+          "place_style": 0
+        }
+      ],
+      "352": [
+        {
+          "item_id": 5734,
+          "item_name": "HallowedBrickWall",
+          "item_name_zh": "神圣砖墙",
+          "place_style": 0
+        }
+      ],
+      "353": [
+        {
+          "item_id": 5919,
+          "item_name": "PineTreeBlockWall",
+          "item_name_zh": "松树墙",
+          "place_style": 0
+        }
+      ],
+      "354": [
+        {
+          "item_id": 5921,
+          "item_name": "EasterBlockWall",
+          "item_name_zh": "复活节墙",
+          "place_style": 0
+        }
+      ],
+      "355": [
+        {
+          "item_id": 5923,
+          "item_name": "GothicBrickWall",
+          "item_name_zh": "哥特砖墙",
+          "place_style": 0
+        }
+      ],
+      "356": [
+        {
+          "item_id": 5925,
+          "item_name": "FlinxFurBlockWall",
+          "item_name_zh": "小雪怪皮墙",
+          "place_style": 0
+        }
+      ],
+      "357": [
+        {
+          "item_id": 5927,
+          "item_name": "JellyfishBlockWall",
+          "item_name_zh": "水母墙",
+          "place_style": 0
+        }
+      ],
+      "358": [
+        {
+          "item_id": 5931,
+          "item_name": "PineWoodBlockWall",
+          "item_name_zh": "松木墙",
+          "place_style": 0
+        }
+      ],
+      "359": [
+        {
+          "item_id": 5954,
+          "item_name": "HarpyBlockWall",
+          "item_name_zh": "鹰身女妖墙",
+          "place_style": 0
+        }
+      ],
+      "360": [
+        {
+          "item_id": 5997,
+          "item_name": "MoonplateBlockWall",
+          "item_name_zh": "新月墙",
+          "place_style": 0
+        }
+      ],
+      "361": [
+        {
+          "item_id": 6020,
+          "item_name": "LibrarianBlockWall",
+          "item_name_zh": "图书管理员墙",
+          "place_style": 0
+        }
+      ],
+      "362": [
+        {
+          "item_id": 6043,
+          "item_name": "SpikeBlockWall",
+          "item_name_zh": "尖刺墙",
+          "place_style": 0
+        }
+      ],
+      "363": [
+        {
+          "item_id": 6066,
+          "item_name": "OfficeBlockWall",
+          "item_name_zh": "办公墙",
+          "place_style": 0
+        }
+      ],
+      "364": [
+        {
+          "item_id": 6089,
+          "item_name": "ForbiddenBlockWall",
+          "item_name_zh": "禁戒墙",
+          "place_style": 0
+        }
+      ],
+      "365": [
+        {
+          "item_id": 6110,
+          "item_name": "WaterBlockWall",
+          "item_name_zh": "水族墙",
+          "place_style": 0
+        }
+      ],
+      "366": [
+        {
+          "item_id": 6133,
+          "item_name": "BoulderBlockWall",
+          "item_name_zh": "巨石墙",
+          "place_style": 0
+        }
+      ]
+    }
+  }
+}
