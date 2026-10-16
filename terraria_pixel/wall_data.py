@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-"""背景墙名称/ID 目录。历史 RGB、uni、glow 仅留作资料。
-运行时 palette.py 用 calibrated_colors 的放置帧平均色替换 RGB，
-并排除未校准材质；glow 不参与颜色匹配，uni 仅提示明显花纹。
+"""兼容色表重建使用的背景墙名称/ID 目录。
+默认匹配读取 assets 材料库；历史 RGB、uni、glow 不参与默认匹配。
 """
 
 WALLS = [

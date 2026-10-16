@@ -20,7 +20,7 @@ class MapStorageTests(unittest.TestCase):
         storage.candidate_records.cache_clear()
 
     def test_all_tables_match_original_hash_without_disk_expansion(self):
-        audit = json.loads((Path(__file__).resolve().parents[1] / 'tools/map_compression.json').read_text())
+        audit = json.loads((Path(__file__).parent / 'fixtures/map_tables.json').read_text())
         before = {p.name: p.stat().st_size for p in storage.ASSETS.iterdir() if p.is_file()}
         for kind, expected in audit.items():
             table = storage.table_bytes(kind)

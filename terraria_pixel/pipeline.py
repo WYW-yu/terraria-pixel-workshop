@@ -1,7 +1,7 @@
 """图片像素化、物块/墙画颜色匹配及作品保存。"""
 from __future__ import annotations
 
-from .calibrated_colors import MODEL_VERSION, GAME_VERSION
+from .calibrated_colors import GAME_VERSION
 
 from dataclasses import dataclass, field, replace
 from pathlib import Path

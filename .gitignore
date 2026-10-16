@@ -31,6 +31,10 @@ dist*/
 .tmp/
 *.log
 
+# Generated calibration reports
+tools/*_calibration.json
+tools/map_compression.json
+
 # Local secrets and editor settings
 .env
 .env.*

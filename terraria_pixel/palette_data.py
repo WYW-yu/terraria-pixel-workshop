@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""方块名称/ID 目录（来源见 research/build_palette.py）。历史 RGB 不参与默认匹配；运行时读取 calibrated_colors。"""
+"""兼容色表重建使用的方块名称/ID 目录；默认匹配读取 assets 材料库。"""
 
 BLOCKS = [
     {"name": 'Dirt', "name_zh": '土块', "tile_id": 0, "item_id": 2, "rgb": (161, 116, 86), "estimate": False},

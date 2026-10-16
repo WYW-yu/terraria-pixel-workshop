@@ -1,71 +1,64 @@
 # 泰拉瑞拉像素工坊 v5.2
 
-图片转像素画、编辑草稿、生成 TEdit 图纸或直接写入 Terraria 世界。Windows 便携版，无需安装。
+图片像素化与编辑工具，支持生成 Terraria 材料画、保存 TEdit 图纸，以及直接导入 `.wld` 世界。Windows 便携版无需安装。
 
-## 本版修改
+## 使用流程
 
-- 合并顶部草稿和历史入口为“历史记录 / 草稿”，分别查看作品和草稿。
-- 直接覆盖世界不再生成 .bak；写入世界成功后自动保存本次作品与导入参数，可在历史中重新打开编辑，不复制整个世界。世界与记录的保存错误分别报告。
-- v5.2 按物品的实际 createWall/createTile 关系修正物品编号。71 个天然墙重复条目改用对应可放置墙参与选材，保留这些墙的可制作版本及其独立贴图/地图颜色。
-- 排除不可破坏墙、两个未使用墙 ID、不能重新放置的“最土的块”和临时盘蛇。可以通过微光获得的天然土墙、生命木墙、地牢墙等仍可使用。
-- 新增 `assets/material_access.json` 保存物品与世界材料 ID 的对应关系；旧颜色快照仍可查看，不会因读取历史而重新匹配。含被排除材料的旧作品需重新生成材料版后导出。
+1. 导入或拖入图片，设置尺寸、采样方式和颜色参数，生成像素画。
+2. 预览或编辑像素画；可保存草稿、导出 PNG，也可确认当前画面并生成三个材料版本。
+3. 三个材料版本可分别编辑，随后保存 TEdit 文件或导入世界。
+4. 已保存的作品、草稿和成功导入世界的作品可从“历史记录 / 草稿”重新打开。
 
-- 转换分为两步：先生成像素画，查看或编辑后确认，再生成混合版、背景墙版和地图版。第二步使用确认的当前像素，不重复缩小或调色；三版可分别编辑，彼此独立。
-- 地图版使用允许的全部物块和背景墙，统一按地图代表色匹配；编辑、图纸、世界导入共用这一套地图色库。
-- 修改像素画后，旧材料结果暂停导出，重新生成前提示替换三版的当前编辑；取消或失败不会清空已有画面。
-- 便携目录从约241 MiB精简至103 MiB，ZIP从约62 MiB降至44 MiB。地图查找表无损压缩，首次使用只解压到内存；精简未使用的打包运行库，保留界面中文翻译和已支持的图片格式。
-- 地图匹配缓存固定候选颜色，减少重复构造和距离计算的临时数组；颜色结果不变。
-- 版本号统一为5.2（界面及EXE文件属性），保留右下角署名。
-- 预览选项的介绍改为下方常显说明，切换页面同步更新；保存版本和世界导入也使用同一份三版说明。
-- 世界导入底部按钮统一高度，两个保存按钮统一宽度，“返回”保持较窄。
+| 版本 | 说明 |
+| --- | --- |
+| 混合版 | 适合直接观看，使用物块和背景墙，搭配喷漆。 |
+| 背景墙版 | 适合直接观看，只使用背景墙，搭配喷漆。 |
+| 地图版 | 适合从大小地图观看，使用物块和背景墙，搭配喷漆。 |
 
-- 补入上一份 1.4.5.8 ID 清单未收录的 28 种方形物块、36 种墙；总计 337 种物块和 366 种墙。
-- 新材料按原贴图逐纹素喷漆后计算均值、Lab 均值与方差，物块另外计算虚化后的参考色。
-- 新材料地图基础色取自游戏 MapHelper 的实际颜色表；沿用地图喷漆规则、RGB 距离平方和同分取后者规则，扩展比较新增候选。
-- 保留混合版、背景墙版、地图版；移除背景墙地图版入口、生成和导出。
-- 世界导入移除指定说明与 X/Y 输入框，使用世界预览定位，支持缩放、平移和拖动作画。
-- 主界面保存按钮改为“保存TEdit文件”。旧草稿与作品保留，不重新计算旧颜色快照。
+完整操作见 [使用说明.txt](使用说明.txt)。该文件以用户确认稿为准，打包脚本会将它同步到发行目录和 ZIP。
 
-## 使用
+## 从源码运行
 
-参见 [使用说明.txt](使用说明.txt)。发行目录 `dist-v5.2/TerrariaPixelArt` 中双击 `TerrariaPixelArt.exe`。
+需要 Python 3.10+；桌面程序面向 Windows。
 
-使用说明以用户重写的确认稿为准。源码根目录、EXE旁和发行压缩包内使用同一份原文；便携打包会自动同步源码根目录的说明。源码打包也直接收录该文件，后续维护请勿恢复此前的长版说明。
+```bat
+python -m pip install -r requirements.txt
+python main.py
+```
 
-## 颜色与安全规则
+Windows 也可以双击 `run.bat`。命令行用法：
 
-| 版本 | 材料 | 参考色 |
-| --- | --- | --- |
-| 混合版 | 允许的物块和墙 | 物块虚化贴图色 + 墙贴图色 |
-| 背景墙版 | 墙 | 喷漆贴图色 |
-| 地图版 | 允许的物块和背景墙 | 地图代表色 + 地图喷漆规则 |
+```bat
+python main.py --help
+python main.py image.png --width 100 --out 输出 --schematic
+```
 
-喷漆先在每个纹素上计算，再求平均，不与“先平均再喷漆”混用。主画面色与地图色独立。色库提供无漆及13–30号漆；校准数据包含0–30号漆。
-透明材质按白底合成；动画使用首组密铺帧。存在动画、透明或特殊效果的新增材质不进入贴图色自动匹配，允许的素材仍可手动选择。真实背景、光照和帧变化会影响游戏观感，尚未做逐项游戏截图测量。
-传播源、重力、易损/临时和下落特效物块在自动匹配、绘制、导出及世界写入中继续禁用。
+## 目录与开发入口
 
-## 源码入口
+| 路径 | 用途 |
+| --- | --- |
+| `main.py` | 桌面与命令行入口 |
+| `terraria_pixel/desktop.py` | 主界面、预览与保存 |
+| `terraria_pixel/pipeline.py` | 像素画生成、确认后的三版匹配与导出 |
+| `terraria_pixel/editor.py`、`editor_window.py` | 编辑数据、画布与编辑窗口 |
+| `terraria_pixel/color_model.py` | 逐纹素喷漆公式 |
+| `terraria_pixel/material_library.py`、`palette.py` | 贴图色、虚化色与地图色候选 |
+| `terraria_pixel/map_colors.py`、`map_storage.py` | 地图匹配与压缩查找表 |
+| `terraria_pixel/material_access.py`、`material_rules.py` | 物品放置关系与材料限制 |
+| `terraria_pixel/drafts.py`、`history.py` | 草稿、作品快照与历史记录 |
+| `terraria_pixel/schematic.py` | TEdit 图纸写入 |
+| `terraria_pixel/world.py`、`world_dialog.py` | 世界读写与导入界面 |
+| `assets/` | 运行所需色库、背景与中文翻译 |
+| `tools/` | 色库重建与发布工具，见 [工具说明](tools/README.md) |
 
-- `terraria_pixel/pipeline.py`：像素画预览、确认后的三版匹配、导出；命令行保持一次完成转换。
-- `terraria_pixel/color_model.py`：逐纹素喷漆公式。
-- `terraria_pixel/material_library.py`、`palette.py`：贴图/虚化/地图色库。
-- `terraria_pixel/map_colors.py`：地图查表与新增候选比较。
-- `terraria_pixel/map_storage.py`：候选记录与无损压缩查找表的读取、损坏检查及旧格式兼容。
-- `terraria_pixel/world.py`、`world_dialog.py`：世界读写、定位界面。
-- `terraria_pixel/editor.py`、`editor_window.py`：像素编辑。
-- `tools/material_additions_1458.json`：新增64种材料的ID和游戏地图基础色。
-- `tools/additions_calibration.json`：纹理哈希与静态参考限制。
+颜色计算、材料限制和文件兼容说明见 [算法说明.md](算法说明.md)。
 
-既有色库候选保留前缀顺序，新候选追加，防止原查询表索引错位。已保存作品使用其颜色快照。
+当前自动化测试保留在 `tests/`，运行 `python -m unittest discover -s tests -p "test_*.py" -q`。
 
-## 开发与验证
+## 打包
 
-Python 3.10+，安装 `requirements.txt`。运行 `python main.py`；测试 `python -m unittest discover -s tests -p "test_*.py" -q`。
-界面验证：`python tests/world_ui.py`、`python tests/release_413_ui.py`；发行验证：`python tests/verify_packaged.py <exe>`。
-双击 `打包.bat`，或用 PyInstaller 的 `TerrariaPixelArt.spec` 构建目录式程序，再运行 `tools/package_portable.py`。
-压缩包仅包含主EXE、`_internal` 和使用说明，用户草稿不打入发行包。
+Windows 下双击 `打包.bat`，会安装构建依赖、使用 `TerrariaPixelArt.spec` 构建程序，并生成 `dist-v5.2/泰拉瑞拉像素工坊-v5.2.zip`。
 
-地图资产由 `library_*.tr`（候选记录）和 `library_*.lut.z`（zlib压缩查询表）配对组成，不可只复制其中一项。原始色库数据导入脚本会自动拆分压缩；`tools/compress_map_tables.py` 可重复执行并写出原始数据SHA256审计。`TerrariaPixelArt.spec` 和 `tools/pyinstaller_hooks` 包含精简打包规则，`打包.bat` 使用同一份spec，避免重新收进未使用组件。
+发行 ZIP 只包含主 EXE、必要的 `_internal` 运行库和使用说明。源码 ZIP 可用 `python tools/package_source.py` 生成。
 
-重建新增颜色：先用 `tools/extract_game_textures.js` 解码相应游戏纹理，再运行 `python tools/extend_materials.py <raw目录>`。原始游戏贴图不随程序分发。
-详细结果见 `v4.13验证记录.md`。
+仓库不收录发行二进制、构建缓存、个人图片、世界、草稿和历史作品。旧版专用验证脚本、生成报告与历史审查文档已清理，当前测试和旧作品读取所需的兼容逻辑保留。

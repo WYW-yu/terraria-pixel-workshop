@@ -8,7 +8,7 @@ from PyInstaller.archive.readers import CArchiveReader
 
 project = Path(__file__).resolve().parents[1]
 exe = Path(sys.argv[1]).resolve()
-script = sys.argv[2] if len(sys.argv) > 2 else 'version_ui'
+script = sys.argv[2] if len(sys.argv) > 2 else 'staged_workflow_ui'
 archive = CArchiveReader(str(exe))
 pyz = archive.open_embedded_archive('PYZ.pyz')
 for path in (project / 'terraria_pixel').glob('*.py'):
