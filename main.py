@@ -41,6 +41,8 @@ def cli_main(argv: list[str]) -> int:
     parser.add_argument("--color-limit", type=int, default=0, help="原图颜色上限：0 不限，或 2–256")
     parser.add_argument("--dither", choices=["none", "bayer", "floyd"], default="none", help="材料颜色抖动")
     parser.add_argument("--dither-strength", type=float, default=0.75, help="抖动强度 0–1")
+    parser.add_argument("--material-merge", type=float, default=0,
+                        help="合并近似材料：0关闭，建议1.5轻微、3适中、5较强；范围0–5")
     parser.add_argument("--detail", type=float, default=0.4, help="轮廓增强程度 0–1")
     parser.add_argument("--contrast", type=float, default=1, help="对比度 0–2")
     parser.add_argument("--saturation", type=float, default=1, help="饱和度 0–2")
@@ -73,6 +75,7 @@ def cli_main(argv: list[str]) -> int:
             make_schematic=args.schematic,
             sampling=args.sampling, color_limit=args.color_limit, dither=args.dither,
             dither_strength=args.dither_strength, detail=args.detail, contrast=args.contrast,
+            material_merge=args.material_merge,
             saturation=args.saturation, gamma=args.gamma,
         )
         if args.world:

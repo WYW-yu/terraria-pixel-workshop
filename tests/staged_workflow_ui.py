@@ -32,6 +32,7 @@ with tempfile.TemporaryDirectory() as directory:
     image = root / 'source.png'
     Image.fromarray(np.random.default_rng(516).integers(0, 256, (7, 9, 3), np.uint8)).save(image)
     main = MainWindow()
+    assert main.merge_input.currentData() == 1.5
     main.base_dir = lambda: root
     main._source_loaded((image, np.asarray(Image.open(image)), None))
     main.width_input.setText('9')
@@ -45,6 +46,7 @@ with tempfile.TemporaryDirectory() as directory:
             wait(main)
         assert not errors, errors
         assert main.mode == 4 and main.result.grid is None
+        assert not main.png_button.isHidden() and main.png_button.isEnabled()
         assert main.confirm_button.isEnabled() and main.edit_button.isEnabled()
         assert not main.export_button.isEnabled() and not main.world_button.isEnabled()
         assert not any(main.tab_group.button(mode).isEnabled() for mode in (1, 3, 5))
@@ -71,10 +73,16 @@ with tempfile.TemporaryDirectory() as directory:
         assert any('wall_id' in b for b in main.result.palette_map.blocks)
         assert not main.confirm_button.isEnabled()
         assert main.export_button.isEnabled() and main.world_button.isEnabled()
+        assert main.result.processing['material_merge'] == 1.5
+        assert set(main.result.processing['material_merge_report']) == {'fine', 'wall', 'map'}
+        assert '混合版' in main.merge_result_note.text()
         main.grab().save(str(output / 'materials-ready.png'))
         for mode, target, attr in ((1, 'fine', 'grid'), (3, 'wall', 'grid_wall'), (5, 'map', 'grid_map')):
             snapshots = {key: getattr(main.result, key).copy() for key in ('grid', 'grid_wall', 'grid_map', 'processed_rgb')}
             main.tab_group.button(mode).click()
+            assert main.png_button.isHidden()
+            with patch('terraria_pixel.png_export.export_png', side_effect=AssertionError('材料页不导出PNG')):
+                main.export_pixel_png()
             main.edit_button.click()
             editor = main.editors[0]
             assert editor.target == target and not editor.convert_button.isVisible()
@@ -130,6 +138,22 @@ with tempfile.TemporaryDirectory() as directory:
             wait(main)
         np.testing.assert_array_equal(main.result.processed_rgb, expected_pixels)
         assert main.result.processing['dither'] == 'bayer'
+        # 合并程度属于材料设置，不重新处理已经确认的像素画。
+        main.merge_input.setCurrentIndex(main.merge_input.findData(0))
+        assert not main.preview_dirty and main.confirm_button.isEnabled()
+        assert not main.export_button.isEnabled() and not main.world_button.isEnabled()
+        with patch.object(QMessageBox, 'question', return_value=QMessageBox.StandardButton.Yes):
+            main.confirm_button.click()
+            wait(main)
+        assert main.result.processing['material_merge'] == 0
+        assert all(r['before'] == r['after'] for r in main.result.processing['material_merge_report'].values())
+        np.testing.assert_array_equal(main.result.processed_rgb, expected_pixels)
+        main.merge_input.setCurrentIndex(main.merge_input.findData(3))
+        with patch.object(QMessageBox, 'question', return_value=QMessageBox.StandardButton.Yes):
+            main.confirm_button.click()
+            wait(main)
+        assert main.result.processing['material_merge'] == 3
+        np.testing.assert_array_equal(main.result.processed_rgb, expected_pixels)
         assert not errors, errors
         main.tab_group.button(4).click()
         main.edit_button.click()

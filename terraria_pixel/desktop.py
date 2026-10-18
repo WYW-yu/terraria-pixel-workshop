@@ -868,6 +868,23 @@ class MainWindow(QMainWindow):
         note = label("交错混色仅用于混合版、背景墙版；地图版按地图代表色匹配", "muted")
         note.setWordWrap(True)
         layout.addWidget(note)
+        layout.addWidget(label("合并近似材料", "field"))
+        self.merge_input = QComboBox()
+        for text, value in (("关闭（保留全部材料组合）", 0), ("轻微（推荐）", 1.5),
+                            ("适中（进一步减少材料）", 3), ("较强（可能损失细节）", 5)):
+            self.merge_input.addItem(text, value)
+        self.merge_input.setCurrentIndex(1)
+        self.merge_input.currentIndexChanged.connect(self._settings_changed)
+        layout.addWidget(self.merge_input)
+        self.controls.append(self.merge_input)
+        note = label("生成三版本时，把颜色极近的材料组合统一，优先保留用量多的材料。"
+                     "不改变像素画；混合版和背景墙版还会限制纹理差异。调整后需重新确认生成。", "muted")
+        note.setWordWrap(True)
+        layout.addWidget(note)
+        self.merge_result_note = label("", "muted")
+        self.merge_result_note.setWordWrap(True)
+        self.merge_result_note.hide()
+        layout.addWidget(self.merge_result_note)
         self.advanced_toggle = QCheckBox("更多调整：轮廓、颜色和混色程度")
         layout.addWidget(self.advanced_toggle)
         advanced = QWidget()
@@ -977,7 +994,7 @@ class MainWindow(QMainWindow):
         png_row.setContentsMargins(0, 0, 0, 0)
         png_row.addStretch()
         self.png_button = button("导出像素画 PNG", self.export_pixel_png, "small")
-        self.png_button.setToolTip("导出当前页的像素颜色；可选择保留网格，不包含界面背景。")
+        self.png_button.setToolTip("导出像素画；可选择保留网格，不包含界面背景。")
         png_row.addWidget(self.png_button)
         self.edit_button = button("编辑像素画", self.open_editor, "small")
         self.edit_button.setToolTip("在当前窗口逐格修改这一版：像素画色库不限，"
@@ -1167,12 +1184,14 @@ class MainWindow(QMainWindow):
                     sampling=self.sampling_input.currentData(), color_limit=self.color_input.currentData(),
                     dither=self.dither_input.currentData(), detail=self.detail_input.value(),
                     contrast=self.contrast_input.value(), saturation=self.saturation_input.value(),
-                    gamma=self.gamma_input.value(), dither_strength=self.strength_input.value())
+                    gamma=self.gamma_input.value(), dither_strength=self.strength_input.value(),
+                    material_merge=self.merge_input.currentData())
 
     def _settings_changed(self, *args):
         self._update_estimate()
         if self.result and not self.busy:
-            if self.sender() in (self.scale_input, self.coating_input, self.dither_input, self.strength_input):
+            if self.sender() in (self.scale_input, self.coating_input, self.dither_input,
+                                 self.strength_input, self.merge_input):
                 self.result.processing = dict(self.result.processing,
                                               materials_stale=self.result.grid is not None,
                                               pixels_confirmed=False)
@@ -1274,7 +1293,8 @@ class MainWindow(QMainWindow):
         self.operation = 'materials'
         self._show_result(prefer_pixel=True)
         options = dict(scale=self.scale_input.currentIndex() + 1, coating=self.coating_input.isChecked(),
-                       dither=self.dither_input.currentData(), dither_strength=self.strength_input.value())
+                       dither=self.dither_input.currentData(), dither_strength=self.strength_input.value(),
+                       material_merge=self.merge_input.currentData())
         self._set_busy(True)
         self.progress_bar.setRange(0, 100)
         self.progress_bar.setValue(0)
@@ -1322,6 +1342,14 @@ class MainWindow(QMainWindow):
 
     def _show_result(self, prefer_pixel=False):
         result = self.result
+        reports = result.processing.get('material_merge_report', {})
+        summary = ['上次生成时材料组合数：'] if reports else []
+        for version, title in (('fine', '混合版'), ('wall', '背景墙版'), ('map', '地图版')):
+            if version in reports:
+                report = reports[version]
+                summary.append(f"{title} {report['before']} → {report['after']} 种")
+        self.merge_result_note.setText('\n'.join(summary))
+        self.merge_result_note.setVisible(bool(summary))
         self.tab_group.button(0).setEnabled(self.source_rgb is not None)
         for i, version, grid in ((1, "fine", result.grid), (3, "wall", result.grid_wall),
                                  (5, "map", result.grid_map)):
@@ -1349,10 +1377,9 @@ class MainWindow(QMainWindow):
 
     def _update_png_action(self):
         self.png_actions.setVisible(self.mode in (1, 3, 4, 5))
-        self.png_button.setVisible(self.mode in (4, 5))
-        self.png_button.setText(f"导出{self.tab_group.button(self.mode).text()} PNG" if self.mode in (5,) else "导出像素画 PNG")
+        self.png_button.setVisible(self.mode == 4)
         editable = self.result is not None and not self.busy and not self.preview_dirty
-        self.png_button.setEnabled(editable and (self.result.grid_map is not None if self.mode == 5 else self.result.processed_rgb is not None))
+        self.png_button.setEnabled(editable and self.mode == 4 and self.result.processed_rgb is not None)
         has_grid = self.result is not None and self.result.grid is not None and not self.result.processing.get('materials_stale')
         self.confirm_button.setEnabled(editable and not self.editors and self.result.processed_rgb is not None and
                                        (not has_grid or self.result.processing.get('materials_stale', False)))
@@ -1527,14 +1554,12 @@ class MainWindow(QMainWindow):
         self._update_png_action()
 
     def export_pixel_png(self):
-        if self.busy or self.result is None or self.preview_dirty:
+        if self.busy or self.result is None or self.preview_dirty or self.mode != 4:
             return
         from .png_export import export_png
-        suffix = '-' + self.tab_group.button(self.mode).text() if self.mode in (5,) else ""
-        default = (self.result.out_dir or self.base_dir()) / f"{self.result.name or '像素画'}{suffix}.png"
+        default = (self.result.out_dir or self.base_dir()) / f"{self.result.name or '像素画'}.png"
         try:
-            rgb = (material_pixels(self.result.grid_map, self.result.palette_map) if self.mode == 5 else self.result.processed_rgb)
-            path = export_png(self, rgb, default)
+            path = export_png(self, self.result.processed_rgb, default)
             if path:
                 self.stage_label.setText(f"PNG已导出：{path.name}")
         except (OSError, ValueError, MemoryError) as exc:
@@ -1616,7 +1641,8 @@ class MainWindow(QMainWindow):
         self.coating_input.setChecked(values.get("coating", True))
         for control, key, default in ((self.sampling_input, "sampling", "auto"),
                                      (self.color_input, "color_limit", 0),
-                                     (self.dither_input, "dither", "none")):
+                                     (self.dither_input, "dither", "none"),
+                                     (self.merge_input, "material_merge", 0)):
             control.setCurrentIndex(max(0, control.findData(values.get(key, default))))
         for control, key, default in ((self.detail_input, "detail", .4),
             (self.contrast_input, "contrast", 1), (self.saturation_input, "saturation", 1),

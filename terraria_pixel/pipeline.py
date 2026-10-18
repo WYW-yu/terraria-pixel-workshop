@@ -15,6 +15,7 @@ from .image_io import image_size, load_image_pixels, pixelate, resolve_sampling
 from .pixels import validate_schematic_size
 from .palette import Palette, mixed_palette, wall_palette, map_palette
 from .material_rules import repair_grid
+from .material_merge import merge_similar_materials, validate_merge_tolerance
 from .map_colors import match_map
 from .material_library import PLACED_MODEL, ACTUATED_MODEL, MAP_MODEL
 from .quantize import match_to_palette
@@ -95,6 +96,7 @@ def prepare_pixel_preview(
     color_limit: int = 0,
     dither: str = "none",
     dither_strength: float = 0.75,
+    material_merge: float = 0,
     progress: Callable[[int, str], None] | None = None,
     cancelled: Callable[[], bool] | None = None,
 ) -> Result:
@@ -108,6 +110,7 @@ def prepare_pixel_preview(
         raise ValueError("scale 必须 >= 1")
     if dither not in {"none", "bayer", "floyd"} or not 0 <= dither_strength <= 1:
         raise ValueError("抖动模式需为 none / bayer / floyd，强度需为 0–1")
+    material_merge = validate_merge_tolerance(material_merge)
 
     def check_cancel():
         if cancelled and cancelled():
@@ -132,6 +135,7 @@ def prepare_pixel_preview(
     processing = dict(sampling=sampling, sampling_used=sampling_used, detail=detail,
                       contrast=contrast, saturation=saturation, gamma=gamma,
                       color_limit=color_limit, dither=dither, dither_strength=dither_strength,
+                      material_merge=material_merge,
                       width=width, scale=scale, coating=coating,
                       color_model=ACTUATED_MODEL if palette is None else "custom-rgb",
                       map_color_model=MAP_MODEL, map_matching="rgb-squared-last-tie",
@@ -149,7 +153,8 @@ def prepare_pixel_preview(
 
 
 def generate_material_versions(result: Result, *, palette=None, scale=None, coating=None,
-                               dither=None, dither_strength=None, progress=None, cancelled=None) -> Result:
+                               dither=None, dither_strength=None, material_merge=None,
+                               progress=None, cancelled=None) -> Result:
     """只匹配已确认的像素，不重新采样、调色或读取原图；成功后返回新结果。"""
     grid_rgb = np.array(result.processed_rgb, dtype=np.uint8, copy=True)
     if grid_rgb.ndim != 3 or grid_rgb.shape[2] not in (3, 4) or not all(grid_rgb.shape[:2]):
@@ -159,6 +164,8 @@ def generate_material_versions(result: Result, *, palette=None, scale=None, coat
     coating = processing.get('coating', True) if coating is None else coating
     dither = processing.get('dither', 'none') if dither is None else dither
     dither_strength = processing.get('dither_strength', .75) if dither_strength is None else dither_strength
+    material_merge = validate_merge_tolerance(
+        processing.get('material_merge', 0) if material_merge is None else material_merge)
     if scale < 1:
         raise ValueError('每格大小至少为1。')
     if dither not in {'none', 'bayer', 'floyd'} or not 0 <= dither_strength <= 1:
@@ -208,11 +215,23 @@ def generate_material_versions(result: Result, *, palette=None, scale=None, coat
 
     grid = repair_grid(grid, pal, match_rgb, cancel=check_cancel)
     grid_map = repair_grid(grid_map, pal_map, grid_rgb, map_colors=True, cancel=check_cancel)
+    merge_reports = {}
+    merged = []
+    for i, (version, title, indices, colors) in enumerate((
+            ('fine', '混合版', grid, pal), ('wall', '背景墙版', grid_wall, pal_wall),
+            ('map', '地图版', grid_map, pal_map))):
+        notify(90 + i * 3, f'合并{title}近似材料')
+        indices, merge_reports[version] = merge_similar_materials(
+            indices, colors, material_merge, map_colors=version == 'map', cancel=check_cancel,
+            progress=lambda p, i=i, title=title: notify(90 + i * 3 + p * 3, f'合并{title}近似材料'))
+        merged.append(indices)
+    grid, grid_wall, grid_map = merged
     processing['material_safety'] = 'buildable-items-no-specials-v3'
     processing['material_access'] = 'item-placement-1.4.5.8-v1'
     processing['actuated_tiles'] = True
     processing['placed_material_scope'] = 'mixed-tile-wall' if palette is None else 'custom'
     processing.update(scale=scale, coating=coating, dither=dither, dither_strength=dither_strength,
+                      material_merge=material_merge, material_merge_report=merge_reports,
                       materials_stale=False, pixels_confirmed=True,
                       color_model=ACTUATED_MODEL if palette is None else 'custom-rgb',
                       map_color_model=MAP_MODEL, map_matching='rgb-squared-last-tie', map_dither='none',
